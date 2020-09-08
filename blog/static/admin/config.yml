@@ -12,7 +12,7 @@ collections:
     create: true
     slug: "index"
     media_folder: ""
-    public_folder: "/blog/public"
+    public_folder: ""
     path: "{{title}}/index"
     editor:
       preview: false
