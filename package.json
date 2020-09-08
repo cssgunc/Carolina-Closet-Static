@@ -1,0 +1,26 @@
+{
+  "name": "carolinaclosetstatic",
+  "version": "1.0.0",
+  "description": "static site for carolinacloset",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cssgunc/Carolina-Closet-Static.git"
+  },
+  "keywords": [
+    "Gatsby"
+  ],
+  "author": "CSSG",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cssgunc/Carolina-Closet-Static/issues"
+  },
+  "homepage": "https://github.com/cssgunc/Carolina-Closet-Static#readme",
+  "dependencies": {
+    "gatsby-plugin-netlify-cms": "^4.3.13",
+    "netlify-cms-app": "^2.12.20"
+  }
+}
