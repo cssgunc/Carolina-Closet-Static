@@ -6,6 +6,7 @@ This is a static site for Carolina Closet built by CSSG
 1. Install [nodejs and npm](https://nodejs.org).
 1. Clone this repo.
 1. `cd` into the cloned directory and run `npm install`.
+1. Install the gatsby cli with the command `npm install -g gatsby-cli`
 1. Run the `gatsby develop` command to start the server in development mode. 
 1. Go to `localhost:8000` in your web browser to see the site.
 
