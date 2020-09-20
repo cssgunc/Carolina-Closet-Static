@@ -1,0 +1,80 @@
+.aboutUsCont {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  min-height: 100vh;
+}
+
+.aboutUsNavCont {
+  width: 25vw;
+  min-height: 100vh;
+  height: 100%;
+}
+.aboutUsInfo {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.aboutUsPage {
+  max-width: 1000px;
+}
+.aboutUsHeader {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 64px;
+  line-height: 75px;
+
+  color: #13294b;
+  margin: 0px;
+  margin-top: 60px;
+}
+.aboutUsSubHeader {
+  font-family: Lato;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 43px;
+
+  color: #4b9cd3;
+  margin-top: 10px;
+}
+.aboutUsText {
+  max-width: 875px;
+  padding-left: 75px;
+  padding-right: 25px;
+}
+.aboutUsNavItem {
+  font-family: Lato;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 45px;
+  color: #13294b;
+  margin: 0;
+  margin-left: 20px;
+}
+.aboutUsNav {
+  position: relative;
+  top: calc(212.5px);
+}
+
+@media only screen and (max-width: 600px) {
+  .aboutUsText {
+    max-width: 875px;
+    padding-left: 25px;
+  }
+  .aboutUsSubHeader {
+    text-align: center;
+    font-size: 25px;
+    margin-left: 25px;
+    margin-right: 25px;
+  }
+  .aboutUsHeader {
+    line-height: 40px;
+    font-size: 40px;
+    margin-left: 25px;
+  }
+}
