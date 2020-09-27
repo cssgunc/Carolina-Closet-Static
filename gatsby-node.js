@@ -1,8 +1,9 @@
-const path = require(`path`)
-const { createFilePath } = require(`gatsby-source-filesystem`)
+const path = require("path")
+const { createFilePath } = require(`gatsby-source-filesystem`);
 
 
 exports.onCreateWebpackConfig = ({ actions }) => {
+
   actions.setWebpackConfig({
     resolve: {
       alias: { "../../theme.config$": path.join(__dirname, "src/semantic/theme.config") }

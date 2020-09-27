@@ -3,7 +3,7 @@ import AdamsNavbar from "../components/AdamsNavbar"
 import "../Styles/aboutUs.css";
 import { isMobile } from 'react-device-detect';
 import AboutUsNav from '../components/AboutUsNav'
-import 'semantic-ui-css/semantic.min.css'
+import "semantic-ui-less/semantic.less";
 import { Container, GridColumn, Grid, Header, Segment, Rail, List } from 'semantic-ui-react'
 
 
@@ -26,7 +26,7 @@ function AboutUs() {
 
                     <Container text>
                         <Header as="h1">About Carolina Closet</Header>
-                        <Header as="h2">"Dressing Heels For Success"</Header>
+                        <Header sub>"Dressing Heels For Success"</Header>
                         <p className="aboutUsText">
                             Carolina Closet is a newly formed student service-based organization.The objective of Carolina Closet is to bridge a gap in the accessibility to resources, specifically business attire, to students at UNC through the acquisition and distribution of donated professional apparel. This organization seeks to deconstruct barriers to professionalism resulting from wealth disparities that may inhibit the pursuit of professional opportunities.</p>
                         <p className="aboutUsText">
@@ -41,8 +41,8 @@ function AboutUs() {
                 <Segment>
 
                     <Container text>
-                        <Header as="h1">Donations</Header>
-                        <Header as="h2">We Accept the following Items</Header>
+                        <Header as="h1"className="aboutUsSubheader">Donations</Header>
+                        <Header sub >We Accept the following Items</Header>
                         <List>
                             <List.Item >
                                 Men’s business suits
