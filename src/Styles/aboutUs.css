@@ -56,10 +56,6 @@
   margin: 0;
   margin-left: 20px;
 }
-.aboutUsNav {
-  position: relative;
-  top: calc(212.5px);
-}
 
 @media only screen and (max-width: 600px) {
   .aboutUsText {
