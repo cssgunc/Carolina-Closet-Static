@@ -1,91 +1,84 @@
-import React from "react"
+import React, { useRef } from "react"
 import AdamsNavbar from "../components/AdamsNavbar"
 import "../Styles/aboutUs.css";
 import { isMobile } from 'react-device-detect';
 import AboutUsNav from '../components/AboutUsNav'
 import "semantic-ui-less/semantic.less";
-import { Container, GridColumn, Grid, Header, Segment, Rail, List } from 'semantic-ui-react'
-
-
-
+import { Container, GridColumn, Grid, Header, Segment, Rail, List, Embed, GridRow, Image, ImageGroup, Ref, Sticky } from 'semantic-ui-react'
+import AboutUsDonations from "../components/AboutUsDonations"
+import AboutUsPartners from "../components/AboutUsPartners"
+import AboutUsGeneral from "../components/AboutUsGeneral";
+import AboutUsMissionVision from "../components/AboutUsMissionVision"
 
 
 function AboutUs() {
     console.log(isMobile)
-
+    const stickyRef = useRef(null);
 
 
 
     return (
+        <Ref innerRef={stickyRef}>
+
         <div style={{ width: "100%" }}>
-            <AdamsNavbar isMobile={isMobile}></AdamsNavbar>
+                <Sticky ref={stickyRef}>
+                    <AdamsNavbar isMobile={isMobile}></AdamsNavbar>
+                </Sticky>
+                <Grid columns={2} centered >
+
+                    <GridColumn width={3}>
+                        <Sticky context={stickyRef}>
+                            <AboutUsNav></AboutUsNav>
+
+                        </Sticky>
+                    </GridColumn>
 
 
-            <Container>
-                <Segment>
+                    <GridColumn width={13} >
 
-                    <Container text>
-                        <Header as="h1">About Carolina Closet</Header>
-                        <Header sub>"Dressing Heels For Success"</Header>
-                        <p className="aboutUsText">
-                            Carolina Closet is a newly formed student service-based organization.The objective of Carolina Closet is to bridge a gap in the accessibility to resources, specifically business attire, to students at UNC through the acquisition and distribution of donated professional apparel. This organization seeks to deconstruct barriers to professionalism resulting from wealth disparities that may inhibit the pursuit of professional opportunities.</p>
-                        <p className="aboutUsText">
-                            With 21% of students at UNC come from a “low income” background, meaning the income for a family of four is below $50,000, a step towards breaking cycles of poverty is the securing of a career after graduation. This process can be hampered without business attire clothing that can be worn to interviews, recruiting sessions, and more. It has been found that a lack of access to adequate clothing can not only affect students psychologically, but can affect first impressions. Sixty-five percent of hiring managers say clothing can be the deciding factor between two similar candidates (Visualistan). Our goal is to provide “a suit up” in the financial struggle associated with securing a career. Students spend the duration of their time at university focused on building the best resume for their desired career path, so the last thing they should have to worry about is lacking suitable professional clothing.</p>
-                        <p className="aboutUsText">
-                            We are following in the tradition of many other institutions including University of South Carolina, University of Kentucky, University of California, Los Angeles, Columbia University, and Armstrong University who have addressed this need on their campuses through the creation of professional attire assistance programs. However, we cannot fully realize our mission without your support! You can volunteer within Carolina Closet, donate to Carolina Closet, and help us spread the word!</p>
-                    </Container>
+                        <Container>
+                            <AboutUsGeneral></AboutUsGeneral>
+                            <AboutUsDonations></AboutUsDonations>
+                            <AboutUsMissionVision></AboutUsMissionVision>
+                            <AboutUsPartners></AboutUsPartners>
 
+                            <Segment>
+                                <Container text>
+                                    <Header size="huge"> Rental Policy</Header>
 
-
-                </Segment>
-                <Segment>
-
-                    <Container text>
-                        <Header as="h1"className="aboutUsSubheader">Donations</Header>
-                        <Header sub >We Accept the following Items</Header>
-                        <List>
-                            <List.Item >
-                                Men’s business suits
-                            </List.Item >
-                            <List.Item>
-                                Women’s business suits
-                                </List.Item>
-                            <List.Item>
-                                Button-up business professional shirts
-                            </List.Item>
-                            <List.Item>
-                                Appropriate blouses
-                                
-                            </List.Item>
-                            <List.Item>
-                                Professional slacks for men and women
-                            </List.Item>
-                            <List.Item>
-                                Conservative ties
-                            </List.Item>
+                                    <Header size="large" color="blue">General</Header>
+                                    <p>
+                                        Only three items of clothing (including accessories) may be borrowed at a given time. Clothing must be returned on or before the date specified to a Carolina Closet staff member to confirm receipt and condition of items. All clothing items are distributed on a first come first serve basis.
+                                    </p>
+                                    <Header size="large"color="blue">Cleaning</Header>
+                                    <p>
+                                        All clothing items and accessories do not have to be washed before they are returned. However, they must be returned in the same condition they are borrowed, free of stains or damages.
+                                    </p>
+                                    <Header size="large" color="blue">Cleaning</Header>
+                                    <p>
+                                        All clothing items and accessories do not have to be washed before they are returned. However, they must be returned in the same condition they are borrowed, free of stains or damages.
+                                    </p>
+                                    <Header size="large" color="blue">Alterations</Header>
+                                    <p>
+                                        Carolina Closet clothing and accessories may not be altered to fit and must be returned in their original condition. Carolina Closet clothing may NOT be cut, dyed, painted or altered. Tape, iron-on bonding-web, glue or any other type of adhesives may NOT be used on clothing.
+                                    </p>
+                                    <Header size="large" color="blue">Rental Return Date</Header>
+                                    <p>
+                                        The return date is calculated by your start rental date plus seven calendar days. If for any reason you need more time, please inform us within 48hrs prior to your due date by filling out this form.
+                                    </p>
+                                    <Header size="large" color="blue">Disclaimer</Header>
+                                    <p>Carolina Closet. and its members are not responsible for accidents or injuries related directly or indirectly from the use of the rented item.
+                                        
+                                    </p>
+                                </Container>
+                            </Segment>
+                        </Container >
 
 
-
-                        </List>
-
-                    </Container>
-
-
-                </Segment>
-
-
-            </Container>
-
-
-
-
-
-
-
+                    </GridColumn>
+                </Grid>
         </div >
-
-
-    )
+        </Ref> )
 
 
 } export default AboutUs

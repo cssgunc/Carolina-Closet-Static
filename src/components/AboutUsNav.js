@@ -10,30 +10,27 @@ function AboutUsNav() {
 
 
     return (
-        <Rail size='massive' position='left' >
-            <div className="aboutUsNav">
-                <h2 className="aboutUsNavItem">
+        <div className="aboutUsNav">
+            <div >
+                <Header size="huge" className="aboutUsNavItem">
                     Home
-                </h2>
-                <h2 className="aboutUsNavItem">
+                </Header>
+                <Header size="huge" className="aboutUsNavItem">
                     Donations
-                </h2>
-                <h2 className="aboutUsNavItem">
+                </Header>
+                <Header size="huge" className="aboutUsNavItem">
                     Vision & Mission
-                </h2>
-                <h2 className="aboutUsNavItem">
+                </Header>
+                <Header size="huge" className="aboutUsNavItem">
                     Partners
-                </h2>
-                <h2 className="aboutUsNavItem">
+                </Header>
+                <Header size="huge" className="aboutUsNavItem">
                     Rentals
-                </h2>
-
+                </Header>
             </div>
 
-
-
-
-        </Rail >);
+        </div>
+    );
 
 
 

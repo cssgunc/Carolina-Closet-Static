@@ -56,10 +56,36 @@
   margin: 0;
   margin-left: 20px;
 }
+
 .aboutUsNav {
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 100px);
+  flex-direction: column;
 }
 
+.imgBorder {
+  border: solid black 2px;
+  height: 150px !important;
+  width: 300px !important;
+  margin: 15px !important;
+  object-fit: contain;
+}
+.donationsHours {
+  color: white !important;
+}
+.aboutUsEmbed {
+  margin: 0 !important;
+}
+
+.margin0 {
+  margin: 0 !important;
+}
+.padding0 {
+  padding: 0 !important;
+}
 @media only screen and (max-width: 600px) {
   .aboutUsText {
     max-width: 875px;
