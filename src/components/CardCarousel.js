@@ -1,6 +1,8 @@
 import Slider from "react-slick";
 import React from "react";
-import "./index.css";
+import "./carousel.css"
+import { Container, Divider, Grid, Image, Segment } from 'semantic-ui-react';
+
 
 
 
@@ -10,24 +12,49 @@ class CardCarousel extends React.Component {
       dots: true
     };
     return (
-      <div className="container">
+      <div className="card">
         <Slider {...settings}>
-          <div>
-            <img src="http://placekitten.com/g/400/200" />
-          </div>
-          <div>
-            <img src="http://placekitten.com/g/400/200" />
-          </div>
-          <div>
-            <img src="http://placekitten.com/g/400/200" />
-          </div>
-          <div>
-            <img src="http://placekitten.com/g/400/200" />
-          </div>
+          <CardContent/>
+          <CardContent/>
+          <CardContent/>
+          <CardContent/>
+          <CardContent/>
+          <CardContent/>
+          <CardContent/>
+
+
+
         </Slider>
       </div>
     );
   }
 }
+
+class CardContent extends React.Component {
+  render() {
+    return (
+      <Segment>
+      <Grid columns={2} relaxed='very'>
+        <Grid.Column>
+          <p>
+            <Image src='https://picsum.photos/200/300' />
+          </p>
+        </Grid.Column>
+        <Grid.Column>
+          <Container>
+            <p> name </p>
+            <p> email: email </p>
+            <p> profile </p>
+          </Container> 
+        </Grid.Column>
+      </Grid>
+  
+      <Divider vertical></Divider>
+    </Segment>
+  );
+      
+  }
+}
+
 
 export default CardCarousel;

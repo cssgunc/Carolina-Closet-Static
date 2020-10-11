@@ -7,16 +7,9 @@ function MeetTheTeam() {
 
 
     return (
-        <Container style={{ margin: 20 }}>
-            <Segment attached="top">
-                <Header as="h2" content="Meet the Team"/>
-                    <p>
-                        This page shows the team member of Caroina Closet
-                    </p>
-            </Segment>
-            <Segment>
-                <CardCarousel/>
-            </Segment>
+        <Container>
+            <Header as="h2" content="Meet the Team"/>
+            <CardCarousel/>
         </Container>
     )
 
