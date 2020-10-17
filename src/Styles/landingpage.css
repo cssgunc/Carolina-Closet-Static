@@ -1,0 +1,71 @@
+.ui.segment {
+    background-color: grey;
+}
+.ui.header:first-child {
+    margin-top: 15%;
+    font-family: Roboto;
+    font-weight: bolder;
+    font-size: 72px;
+    margin-bottom: 0;
+    color: white;
+}
+.ui.header.slogan {
+    text-align: center;
+    font-family: Roboto;
+    font-size: 42px;
+    font-weight: lighter;
+    margin-top: 0;
+    color: white;
+}
+.ui.header {
+    padding: 0;
+}
+.name {
+    text-align: center;
+    
+}
+.ui.card {
+    width: 342px;
+    height: 296px;
+}
+.ui.cards > .card > .content, .ui.card > .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: center;
+}
+.ui.cards > .card > .content > .description, .ui.card > .content > .description {
+    font-size: 36px;
+    text-align: center;
+    margin: 1em 1em;
+    line-height: 1.5;
+    font-family: Roboto;
+    font-weight: bold;
+}
+.ui.cards > .card > .content > .description.a {
+    color: #4B9CD3;
+}
+.ui.cards > .card > .content > .description.b {
+    color: #13294B;
+}
+.ui.cards {
+    margin-bottom: 9%;
+}
+.ui.cards > .card {
+    margin: 3em 5.5em;
+    border-radius: 38px;
+}
+.ui.button {
+    border-radius: 30px;
+    padding: 10%;
+    font-size: 20px;
+    font-family: Roboto;
+}
+.ui.button.a {
+    background-color: #4B9CD3;
+    color: white;
+}
+.ui.button.b {
+    background-color: #13294B;
+    color: white;
+}
