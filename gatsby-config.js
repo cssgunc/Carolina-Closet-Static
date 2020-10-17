@@ -45,6 +45,13 @@ module.exports = {
           `gatsby-remark-prismjs`,
           `gatsby-remark-copy-linked-files`,
           `gatsby-remark-smartypants`,
+          {
+            resolve: `gatsby-remark-instagram-embed`,
+            options: {
+              maxWidth: 590,
+              height: 590,
+            },
+          },
         ],
       },
     },

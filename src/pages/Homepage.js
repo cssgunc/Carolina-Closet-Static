@@ -22,7 +22,17 @@ function Homepage(props) {
                 </Segment>
 
                 <Segment style={{ display: 'flex', flexDirection: 'row', justifyContent: 'center' }}>
-                    <Image style={{ marginRight: '20%' }}>Instagram images</Image>
+                    <Container style={{  }}>
+                        <iframe
+                            src="https://www.instagram.com/p/CFaoAJVAQGg/embed"
+                            frameBorder="0"
+                            allowFullScreen
+                            scrolling="no"
+                            allowTransparency
+                            width="320"
+                            height="518"
+                        ></iframe>
+                    </Container>
                     <Image style={{ marginLeft: '20%' }}>Twitter posts</Image>
                 </Segment>
 
