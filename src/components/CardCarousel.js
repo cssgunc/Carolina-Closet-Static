@@ -14,13 +14,13 @@ class CardCarousel extends React.Component {
     return (
       <div className="card">
         <Slider {...settings}>
-          <CardContent/>
-          <CardContent/>
-          <CardContent/>
-          <CardContent/>
-          <CardContent/>
-          <CardContent/>
-          <CardContent/>
+          <CardContent name="Marc" email="marc@example.com" bio="Hello world" img="https://picsum.photos/1300/1200"/>
+          <CardContent name="Larry" email="larry@yahoo.com" bio="world hello" img="https://picsum.photos/1300/1200"/>
+          <CardContent name="Bob" email="bob@example.com" bio="goodbye world" img="https://picsum.photos/1300/1200"/>
+          <CardContent name="Sara" email="se193@hotmail.com" bio=" world" img="https://picsum.photos/1300/1200"/>
+          <CardContent name="Jenny" email="jjenny@example.com" bio=" world" img="https://picsum.photos/1300/1200"/>
+          <CardContent name="Laverne" email="lv13@gmail.com" bio="Hello world" img="https://picsum.photos/1300/1200"/>
+          <CardContent name="Brock" email="brock@example.com" bio="Hello world" img="https://picsum.photos/1300/1200"/>
 
 
 
@@ -33,18 +33,20 @@ class CardCarousel extends React.Component {
 class CardContent extends React.Component {
   render() {
     return (
-      <Segment>
+      <Segment raised>
       <Grid columns={2} relaxed='very'>
         <Grid.Column>
           <p>
-            <Image src='https://picsum.photos/200/300' />
+            <Image src={this.props.img} />
           </p>
         </Grid.Column>
         <Grid.Column>
-          <Container>
-            <p> name </p>
-            <p> email: email </p>
-            <p> profile </p>
+          <Container textAlign='center'>
+            <strong> Name: {this.props.name} </strong>
+            <Divider />
+            <p> Email: {this.props.email}</p>
+            <Divider />
+            <p> Profile: {this.props.bio}</p>
           </Container> 
         </Grid.Column>
       </Grid>
