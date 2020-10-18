@@ -54,7 +54,7 @@
   line-height: 45px;
   color: #13294b;
   margin: 0;
-  margin-left: 20px;
+  margin-left: 30px;
 }
 
 .aboutUsNav {
@@ -86,6 +86,21 @@
 .padding0 {
   padding: 0 !important;
 }
+.indicator {
+  z-index: 300;
+  height: 35px;
+  width: 15px;
+  background-color: #4b9cd3;
+  position: absolute;
+  left: 0px;
+}
+
+.aboutUsNavWrapper {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
 @media only screen and (max-width: 600px) {
   .aboutUsText {
     max-width: 875px;
