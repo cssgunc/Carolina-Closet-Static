@@ -1,6 +1,6 @@
 import Slider from "react-slick";
 import React from "react";
-import "./carousel.css"
+import "../Styles/carousel.css"
 import { Container, Divider, Grid, Image, Segment } from 'semantic-ui-react';
 
 
