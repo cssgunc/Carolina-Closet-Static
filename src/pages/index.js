@@ -4,7 +4,7 @@ import { Link, graphql } from "gatsby"
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { rhythm } from "../utils/typography"
+//import { rhythm } from "../utils/typography"
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata.title
@@ -12,6 +12,7 @@ const BlogIndex = ({ data, location }) => {
 
   return (
     <div>
+
       <div style={{ display: "flex" }}>
         <Link to="/Landingpage" style={{ padding: "30px" }}>Landing Page</Link>
         <Link to="/MeetTheTeam" style={{ padding: "30px" }}> Meet the Team</Link>
@@ -25,7 +26,7 @@ const BlogIndex = ({ data, location }) => {
         <SEO title="All posts" />
 
         <Bio />
-        {posts.map(({ node }) => {
+        {/* {posts.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug
           return (
             <article key={node.fields.slug}>
@@ -50,7 +51,7 @@ const BlogIndex = ({ data, location }) => {
               </section>
             </article>
           )
-        })}
+        })} */}
       </Layout>
     </div >
   )
