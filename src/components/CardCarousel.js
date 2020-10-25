@@ -1,62 +1,101 @@
 import Slider from "react-slick";
 import React from "react";
+import { isMobile } from "react-device-detect";
 import "../Styles/carousel.css"
 import { Container, Divider, Grid, Image, Segment } from 'semantic-ui-react';
 
 
 
 
-class CardCarousel extends React.Component {
-  render() {
-    var settings = {
-      dots: true
-    };
-    return (
-      <div className="card">
-        <Slider {...settings}>
-          <CardContent name="Marc" email="marc@example.com" bio="Hello world" img="https://picsum.photos/1300/1200"/>
-          <CardContent name="Larry" email="larry@yahoo.com" bio="world hello" img="https://picsum.photos/1300/1200"/>
-          <CardContent name="Bob" email="bob@example.com" bio="goodbye world" img="https://picsum.photos/1300/1200"/>
-          <CardContent name="Sara" email="se193@hotmail.com" bio=" world" img="https://picsum.photos/1300/1200"/>
-          <CardContent name="Jenny" email="jjenny@example.com" bio=" world" img="https://picsum.photos/1300/1200"/>
-          <CardContent name="Laverne" email="lv13@gmail.com" bio="Hello world" img="https://picsum.photos/1300/1200"/>
-          <CardContent name="Brock" email="brock@example.com" bio="Hello world" img="https://picsum.photos/1300/1200"/>
+function CardCarousel() {
+  const data = [
+    {
+      'name': 'Larry',
+      'email': 'larryemail@email.com',
+      'bio': 'larrybio',
+      'img': 'https://picsum.photos/1300/1200' 
+    },
+    {
+      'name': 'Marc',
+      'email': 'larryemail@email.com',
+      'bio': 'larrybio',
+      'img': 'https://picsum.photos/1300/1200' 
+    },
+    {
+      'name': 'Adam',
+      'email': 'larryemail@email.com',
+      'bio': 'larrybio',
+      'img': 'https://picsum.photos/1300/1200' 
+    },
+  ]
+  const listItems = data.map((e) => 
+    <CardContent name={e.name} email={e.email} bio={e.bio} img={e.img}/>
+  );
 
+  var settings = {
+    dots: true
+  };
 
-
-        </Slider>
-      </div>
-    );
-  }
+  return (
+    <div className="card">
+      <Slider {...settings}>
+        {listItems}
+      </Slider>
+    </div>
+  );
 }
+export default CardCarousel;
 
-class CardContent extends React.Component {
-  render() {
+function CardContent(props) {
+  console.log(isMobile);
+
+  if (!isMobile) {
     return (
       <Segment raised>
       <Grid columns={2} relaxed='very'>
         <Grid.Column>
           <p>
-            <Image src={this.props.img} />
+            <Image src={props.img} />
           </p>
         </Grid.Column>
         <Grid.Column>
           <Container textAlign='center'>
-            <strong> Name: {this.props.name} </strong>
+            <strong> Name: {props.name} </strong>
             <Divider />
-            <p> Email: {this.props.email}</p>
+            <p> Email: {props.email}</p>
             <Divider />
-            <p> Profile: {this.props.bio}</p>
+            <p> Profile: {props.bio}</p>
           </Container> 
         </Grid.Column>
       </Grid>
-  
+
       <Divider vertical></Divider>
     </Segment>
-  );
-      
+    );
   }
-}
+
+  if (isMobile) {
+    return (
+      <Segment raised>
+      <Grid divided='vertically' relaxed='very'>
+        <Grid.Row>
+            <Image src={props.img} />
+        </Grid.Row>
+        <Divider />
+        <Grid.Row>
+          <Container>
+            <strong> Name: {props.name} </strong>
+            <Divider />
+            <p> Email: {props.email}</p>
+            <Divider />
+            <p> Profile: {props.bio}</p>
+          </Container> 
+        </Grid.Row>
+      </Grid>
+    </Segment>
+
+    );
+  }
+} 
 
 
-export default CardCarousel;
