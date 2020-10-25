@@ -10,6 +10,8 @@ import AboutUsPartners from "../components/AboutUsPartners"
 import AboutUsGeneral from "../components/AboutUsGeneral";
 import AboutUsMissionVision from "../components/AboutUsMissionVision"
 import AboutUsRentals from "../components/AboutUsRentals";
+import { graphql } from "gatsby"
+
 
 
 
@@ -26,10 +28,11 @@ function AboutUs() {
 
     useEffect(() => {
         arrRefs = [generalRef, donationsRef, missionRef, partnersRef, rentalsRef];
-
-
-
     })
+
+
+
+
 
 
     return (
@@ -42,7 +45,7 @@ function AboutUs() {
                 </Sticky>
                 <Grid columns={2} centered >
 
-                    <GridColumn width={3}>
+                    <GridColumn width={3} only="computer">
                         <Sticky context={stickyRef}>
                             <AboutUsNav arrRefs={arrRefs}></AboutUsNav>
 
@@ -50,7 +53,7 @@ function AboutUs() {
                     </GridColumn>
 
 
-                    <GridColumn width={13} >
+                    <GridColumn width={isMobile ? 16 : 13} >
 
                         <Container>
                             <Ref innerRef={generalRef}>
@@ -75,7 +78,8 @@ function AboutUs() {
                     </GridColumn>
                 </Grid>
             </div >
-        </Ref>)
+        </Ref >)
 
 
 } export default AboutUs
+
