@@ -10,10 +10,14 @@ import AboutUsPartners from "../components/AboutUsPartners"
 import AboutUsGeneral from "../components/AboutUsGeneral";
 import AboutUsMissionVision from "../components/AboutUsMissionVision"
 import AboutUsRentals from "../components/AboutUsRentals";
+import { graphql } from "gatsby"
 
 
 
-function AboutUs() {
+
+function AboutUs({
+    data, // this prop will be injected by the GraphQL query below.
+}) {
     console.log(isMobile)
     const stickyRef = useRef(null);
 
@@ -26,10 +30,12 @@ function AboutUs() {
 
     useEffect(() => {
         arrRefs = [generalRef, donationsRef, missionRef, partnersRef, rentalsRef];
-
-
-
     })
+
+
+    const { markdownRemark } = data // data.markdownRemark holds your post data
+    const { frontmatter, html } = markdownRemark
+
 
 
     return (
@@ -79,3 +85,17 @@ function AboutUs() {
 
 
 } export default AboutUs
+
+export const pageQuery = graphql`
+    query($slug: String!) {
+        markdownRemark(frontmatter: { slug: { eq: "aboutUs" } }) {
+        html
+        frontmatter {
+            
+            subheader
+            title
+            about
+        }
+        }
+    }
+    `
