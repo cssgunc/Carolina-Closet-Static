@@ -14,6 +14,32 @@ function AdamsNavbar(props) {
         leave: { transform: 'translateX(100%)' },
     })
 
+    let divs = [null, null, null, null];
+
+    //pass in a string of page equalling the page name to have a triangle appear under that header
+    switch (props.page) {
+        case "home":
+            divs[0] = (<div className="triangle"> </div>);
+            break;
+        case "aboutUs":
+            divs[1] = (<div className="triangle"> </div>);
+            break;
+        case "meetTheTeam":
+            divs[2] = (<div className="triangle"> </div>);
+            break;
+        case "rentals":
+            divs[3] = (<div className="triangle"> </div>);
+            break;
+    }
+
+
+
+
+
+
+
+
+
 
     if (!props.isMobile) {
         return (
@@ -22,15 +48,19 @@ function AdamsNavbar(props) {
                 <nav className="nav">
                     <div className="navItemContainer">
                         <h1 id="home" className="navItem"> Home</h1>
+                        {divs[0]}
                     </div>
                     <div className="navItemContainer">
                         <h1 className="navItem"> About Us</h1>
+                        {divs[1]}
                     </div>
                     <div className="navItemContainer">
                         <h1 className="navItem"> Meet The Team</h1>
+                        {divs[2]}
                     </div>
                     <div className="navItemContainer">
                         <h1 className="navItem"> Rentals</h1>
+                        {divs[3]}
                     </div>
 
                 </nav>
