@@ -15,9 +15,7 @@ import { graphql } from "gatsby"
 
 
 
-function AboutUs({
-    data, // this prop will be injected by the GraphQL query below.
-}) {
+function AboutUs() {
     console.log(isMobile)
     const stickyRef = useRef(null);
 
@@ -33,8 +31,7 @@ function AboutUs({
     })
 
 
-    const { markdownRemark } = data // data.markdownRemark holds your post data
-    const { frontmatter, html } = markdownRemark
+
 
 
 
@@ -48,7 +45,7 @@ function AboutUs({
                 </Sticky>
                 <Grid columns={2} centered >
 
-                    <GridColumn width={3}>
+                    <GridColumn width={3} only="computer">
                         <Sticky context={stickyRef}>
                             <AboutUsNav arrRefs={arrRefs}></AboutUsNav>
 
@@ -56,7 +53,7 @@ function AboutUs({
                     </GridColumn>
 
 
-                    <GridColumn width={13} >
+                    <GridColumn width={isMobile ? 16 : 13} >
 
                         <Container>
                             <Ref innerRef={generalRef}>
@@ -81,21 +78,8 @@ function AboutUs({
                     </GridColumn>
                 </Grid>
             </div >
-        </Ref>)
+        </Ref >)
 
 
 } export default AboutUs
 
-export const pageQuery = graphql`
-    query($slug: String!) {
-        markdownRemark(frontmatter: { slug: { eq: "aboutUs" } }) {
-        html
-        frontmatter {
-            
-            subheader
-            title
-            about
-        }
-        }
-    }
-    `
