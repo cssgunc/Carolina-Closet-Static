@@ -1,9 +1,12 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 
+
 //import { rhythm } from "../utils/typography"
 
-const BlogIndex = ({ data, location }) => {
+const BlogIndex = () => {
+  // const siteTitle = data.site.siteMetadata.title
+  // const posts = data.allMarkdownRemark.edges
 
   return (
     <div>
@@ -14,6 +17,7 @@ const BlogIndex = ({ data, location }) => {
         <Link to="/AboutUs" style={{ padding: "30px" }}> About Us</Link>
         <Link to="/Homepage" style={{ padding: "30px" }}> HomePage</Link>
       </div>
+
 
 
 
@@ -44,7 +48,6 @@ const BlogIndex = ({ data, location }) => {
             </article>
           )
         })} */}
-
     </div >
   )
 }

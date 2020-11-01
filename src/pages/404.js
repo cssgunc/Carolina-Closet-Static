@@ -1,16 +1,13 @@
 import React from "react"
-import { graphql } from "gatsby"
 
 
-const NotFoundPage = ({ data, location }) => {
-  const siteTitle = data.site.siteMetadata.title
+const NotFoundPage = () => {
 
   return (
 
-    <h1>dis shit not here</h1>
+    <h1>The shit yyou looking for aint here</h1>
 
   )
 }
 
-export default NotFoundPage
 
