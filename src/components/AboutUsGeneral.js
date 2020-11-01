@@ -8,7 +8,7 @@ function AboutUsGeneral() {
 
 
 
-    const data = useStaticQuery(graphql`
+  const data = useStaticQuery(graphql`
     query MyQuery {
         allMarkdownRemark(filter: {fields: {slug: {eq: "/AboutUs/about-carolina-closet/"}}}) {
           edges {
@@ -23,26 +23,26 @@ function AboutUsGeneral() {
         }
       }
     `)
-    const { allMarkdownRemark } = data // data.markdownRemark holds your post data
-    const { frontmatter } = allMarkdownRemark.edges[0].node
+  const { allMarkdownRemark } = data // data.markdownRemark holds your post data
+  const { frontmatter } = allMarkdownRemark.edges[0].node
 
 
 
 
 
-    return (
-        <Segment>
-            <Container text>
-                <Header size="huge">{frontmatter.title}</Header>
-                <Header color="blue">{frontmatter.SubHeader}</Header>
-                <p >
-                    {frontmatter.about}
-                </p>
-            </Container>
+  return (
+    <Segment>
+      <Container text>
+        <Header size="huge">{frontmatter.title}</Header>
+        <Header color="blue">{frontmatter.SubHeader}</Header>
+        <p >
+          {frontmatter.about}
+        </p>
+      </Container>
 
 
 
-        </Segment>);
+    </Segment>);
 
 
 

@@ -123,3 +123,8 @@
 
   border-bottom: 20px solid white;
 }
+.links {
+  box-shadow: none !important;
+  color: white !important;
+  text-decoration: none !important;
+}
