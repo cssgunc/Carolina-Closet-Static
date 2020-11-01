@@ -25,6 +25,7 @@ collections:
   - name: "aboutUs"
     label: "aboutUs"
     folder: "/content/blog/AboutUs"
+    
     create: true
     media_folder: ""
     public_folder: ""
@@ -32,3 +33,59 @@ collections:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "SubHeader", name: "SubHeader", widget: "string" }
       - { label: "about", name: "about", widget: "text" }
+  - name: "aboutUsDonations"
+    label: "aboutUsDonations"
+    folder: "/content/blog/AboutUs"
+    create: true
+    media_folder: ""
+    public_folder: ""
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "SubHeader", name: "subHeader", widget: "string" }
+      - {
+          label: "TypeOfDonation",
+          name: "typeOfDonation",
+          widget: "list",
+          allow_add: true,
+        }
+  - name: "aboutUsMissionVision"
+    label: "aboutUsMissionVision"
+    folder: "/content/blog/AboutUs"
+    create: true
+    media_folder: ""
+    public_folder: ""
+    fields:
+      - { label: "mission", name: "mission", widget: "text" }
+      - { label: "vision", name: "vision", widget: "text" }
+  - name: "aboutUsPartners"
+      label: "aboutUsPartners"
+      folder: "/content/blog/AboutUs"
+      create: true
+      media_folder: ""
+      public_folder: ""
+      fields:
+        - { label: "Title", name: "title", widget: "string" }
+        - { label: "SubHeader", name: "subHeader", widget: "string" }
+  - name: "aboutUsPartnersItem"
+      label: "aboutUsPartnersItem"
+      folder: "/content/blog/AboutUs/Partners"
+      create: true
+      media_folder: ""
+      public_folder: ""
+      fields:
+        - { label: "Name", name: "name", widget: "string" }
+        - { label: "About", name: "about", widget: "text" }
+        - { label: "Image", name: "image", widget: "image" }
+  - name: "aboutUsRentalSection"
+        label: "aboutUsRentalSection"
+        folder: "/content/blog/AboutUs"
+        create: true
+        media_folder: ""
+        public_folder: ""
+        fields:
+          - { label: "Name", name: "name", widget: "string" }
+          - { label: "Description", name: "description", widget: "text" }
+
+
+
+
