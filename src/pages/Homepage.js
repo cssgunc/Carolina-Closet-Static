@@ -10,7 +10,7 @@ function Homepage(props) {
 
     return (
         <div style={{ width: "100%", marginBottom: "30px" }}>
-            <AdamsNavbar isMobile={isMobile}></AdamsNavbar>
+            <AdamsNavbar isMobile={isMobile} page="home"></AdamsNavbar>
             <Container className="center aligned">
                 <Segment className="segmentBackground">
                     <Header as="h1" center={true} color="blue" className="mainContentHeader">Home</Header>
