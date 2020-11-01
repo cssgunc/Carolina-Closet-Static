@@ -25,6 +25,7 @@ collections:
   - name: "aboutUs"
     label: "aboutUs"
     folder: "/content/blog/AboutUs"
+    
     create: true
     media_folder: ""
     public_folder: ""
