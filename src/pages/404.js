@@ -1,13 +1,14 @@
 import React from "react"
 
 
-const NotFoundPage = () => {
+function NotFoundPage() {
 
   return (
+    <div>
+      <h1>The shit yyou looking for aint here</h1>
+    </div>
 
-    <h1>The shit yyou looking for aint here</h1>
-
-  )
-}
+  );
+} export default NotFoundPage
 
 
