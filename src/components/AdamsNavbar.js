@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import "../Styles/adamsnavbar.css";
-import img from "../../static/images/carolinaCloset.png"
+import img from "../../static/images/Suitlogo.png"
 import { useTransition, animated } from 'react-spring'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
