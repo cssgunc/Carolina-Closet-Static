@@ -4,7 +4,7 @@ import img from "../../static/images/carolinaCloset.png"
 import { useTransition, animated } from 'react-spring'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
-
+import { Link } from "gatsby"
 function AdamsNavbar(props) {
     const [isExpanded, setIsExpanded] = useState(false);
 
@@ -47,15 +47,15 @@ function AdamsNavbar(props) {
                 <img src={img} className="navImg"></img>
                 <nav className="nav">
                     <div className="navItemContainer">
-                        <h1 id="home" className="navItem"> Home</h1>
+                        <h1 id="home" className="navItem" ><Link className="links" to="/Homepage">Home</Link></h1>
                         {divs[0]}
                     </div>
                     <div className="navItemContainer">
-                        <h1 className="navItem"> About Us</h1>
+                        <h1 className="navItem"><Link className="links" to="/AboutUs">About Us</Link> </h1>
                         {divs[1]}
                     </div>
                     <div className="navItemContainer">
-                        <h1 className="navItem"> Meet The Team</h1>
+                        <h1 className="navItem"> <Link className="links" to="/MeetTheTeam">Meet The Team</Link></h1>
                         {divs[2]}
                     </div>
                     <div className="navItemContainer">
