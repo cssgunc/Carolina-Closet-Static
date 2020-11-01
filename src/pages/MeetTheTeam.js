@@ -1,8 +1,9 @@
-
-//this import is needed at the top of every react file
-import React from "react"
-//this import imports the AdamsNavbar component to be used in this file
+import React from "react";
+import { Container, Header, Message, Segment } from "semantic-ui-react";
+import 'semantic-ui-css/semantic.min.css'
+import CardCarousel from "../components/CardCarousel";
 import AdamsNavbar from "../components/AdamsNavbar"
+import { isMobile } from 'react-device-detect';
 
 function MeetTheTeam() {
 
@@ -14,8 +15,13 @@ function MeetTheTeam() {
             {/* Adams navabar is simply a component file meaning it is responsible for rendering adams navbar and 
                 is responsible for any logic needed in the navbar.
             */}
-            <AdamsNavbar />
-            <h1> Meet the team</h1>
+
+            <AdamsNavbar isMobile={isMobile} page="meetTheTeam"/>
+            <Container style={{marginTop: "20px"}}>
+                <Header as="h1" content="Meet the Team"/>
+                <CardCarousel/>
+            </Container>
+
 
 
         </div>
