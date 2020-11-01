@@ -15,11 +15,13 @@ function MeetTheTeam() {
             {/* Adams navabar is simply a component file meaning it is responsible for rendering adams navbar and 
                 is responsible for any logic needed in the navbar.
             */}
+
             <AdamsNavbar isMobile={isMobile} page="meetTheTeam"/>
             <Container style={{marginTop: "20px"}}>
                 <Header as="h1" content="Meet the Team"/>
                 <CardCarousel/>
             </Container>
+
 
 
         </div>
