@@ -1,9 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Roboto:wght@400;700&display=swap");
 
 * {
-  margin: 0;
-  box-sizing: border-box;
-  overflow-x: hidden;
+  /* box-sizing: border-box !important; */
 }
 
 .navDiv {
@@ -33,6 +31,7 @@
 }
 
 .navItemContainer {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -113,4 +112,14 @@
   letter-spacing: 0.1em;
   text-align: center;
   margin: 0;
+}
+.triangle {
+  position: absolute;
+  bottom: 0;
+  height: 0px;
+  width: 0px;
+  border-left: 40px solid transparent;
+  border-right: 40px solid transparent;
+
+  border-bottom: 20px solid white;
 }

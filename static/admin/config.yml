@@ -4,6 +4,7 @@ backend:
 
 media_folder: static/img
 public_folder: /img
+publish_mode: editorial_workflow
 
 collections:
   - name: "blog"
@@ -21,3 +22,13 @@ collections:
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Description", name: "description", widget: "string" }
       - { label: "Body", name: "body", widget: "markdown" }
+  - name: "aboutUs"
+    label: "aboutUs"
+    folder: "/content/blog/AboutUs"
+    create: true
+    media_folder: ""
+    public_folder: ""
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "SubHeader", name: "SubHeader", widget: "string" }
+      - { label: "about", name: "about", widget: "text" }
