@@ -1,0 +1,75 @@
+#landingpageContent.landingpageContentContainer {
+    padding-bottom: 7% !important;
+    background: grey !important;
+}
+
+.landingpageName {
+    color: white !important;
+    margin-top: 15% !important;
+    font-family: Roboto !important;
+    font-weight: bolder;
+    font-size: 72px !important;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.landingpageSlogan {
+    text-align: center;
+    font-family: Roboto !important;
+    font-size: 42px !important;
+    font-weight: lighter;
+    margin-top: 0;
+    color: white !important; 
+}
+
+.landingpage.ui.card {
+    width: 342px;
+    height: 296px;
+    border-radius: 38px;
+    margin: 3em 5.5em;
+}
+
+.landingpage.card.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: center;
+}
+
+.landingpage.description.a {
+    font-size: 36px;
+    text-align: center;
+    margin: 1em 1em;
+    line-height: 1.5;
+    font-family: Roboto;
+    font-weight: bold;
+    color: #4B9CD3 !important;
+}
+
+.landingpage.description.b {
+    font-size: 36px;
+    text-align: center;
+    margin: 1em 1em;
+    line-height: 1.5;
+    font-family: Roboto;
+    font-weight: bold;
+    color: #13294B !important;
+}
+
+.landingpage.ui.button.a {
+    border-radius: 30px;
+    padding: 10%;
+    font-size: 20px;
+    font-family: Roboto;
+    background-color: #4B9CD3;
+    color: white;
+}
+
+.landingpage.ui.button.b {
+    border-radius: 30px;
+    padding: 10%;
+    font-size: 20px;
+    font-family: Roboto;
+    background-color: #13294B;
+    color: white;
+}
