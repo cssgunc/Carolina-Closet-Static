@@ -1,6 +1,6 @@
 import React from "react"
 import { Container, Header, Segment } from "semantic-ui-react"
-import "../Styles/landingpage.css"
+// import "../Styles/landingpage.css"
 
 function LandingPage() {
 
@@ -28,17 +28,18 @@ function LandingPage() {
                                         <div className="landingpage description b">Volunteer or Donor?</div>
                                         <button className="landingpage ui button b">
                                             Learn More
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                        </Container>
-                    </Segment>
-                
 
-           </div>
-           
+                                        </button>
+                            </div>
+                        </div>
+                    </div>
+
+                </Container>
+            </Segment>
+
+
+        </div>
+
     )
 
 
