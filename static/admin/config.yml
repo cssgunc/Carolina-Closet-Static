@@ -32,3 +32,14 @@ collections:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "SubHeader", name: "SubHeader", widget: "string" }
       - { label: "about", name: "about", widget: "text" }
+  - name: "meetTheTeam"
+    label: "meetTheTeam"
+    folder: "/content/blog/meetTheTeam"
+    create: true
+    media_folder: ""
+    public_folder: ""
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "numOfMembers", name: "numOfMembers", widget: "string" }
+      - { label: "names", name: "names", widget: "string" }
+      - { label: "bios", name: "bios", widget: "string" }

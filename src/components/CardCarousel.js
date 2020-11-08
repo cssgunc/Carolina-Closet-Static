@@ -7,6 +7,7 @@ import { graphql, useStaticQuery } from "gatsby"
 
 function CardCarousel() {
 
+  /*
   const data = useStaticQuery(graphql`
     query MyQuery {
       allMarkdownRemark(filter: {fields: {slug: {eq: "/MeetTheTeam/meet-the-team/"}}}) {
@@ -25,6 +26,7 @@ function CardCarousel() {
   `)
   const { allMarkdownRemark } = data;
   const { frontmatter } = allMarkdownRemark.edges[0].node;
+  */
 
   const data = [
     {
