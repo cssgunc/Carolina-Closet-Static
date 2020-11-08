@@ -51,16 +51,18 @@ collections:
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "SubHeader", name: "subHeader", widget: "string" }
-  - name: "aboutUsPartnersItem"
-    label: "aboutUsPartnersItem"
-    folder: "/content/blog/AboutUsPartnersItem"
-    create: true
-    media_folder: ""
-    public_folder: ""
-    fields:
-      - { label: "Name", name: "name", widget: "string" }
-      - { label: "About", name: "about", widget: "text" }
-      - { label: "Image", name: "image", widget: "image" }
+      - {
+          label: "PartnersList",
+          name: "partnersList",
+          widget: list,
+          allow_add: true,
+          fields:
+            [
+              { label: "PartnerName", name: "partnerName", widget: "string" },
+              { label: "About", name: "about", widget: "text" },
+              { label: "Image", name: "image", widget: "image" },
+            ],
+        }
   - name: "aboutUsRentals"
     label: "aboutUsRentals"
     folder: "/content/blog/AboutUsRentals"
@@ -68,8 +70,18 @@ collections:
     media_folder: ""
     public_folder: ""
     fields:
-      - { label: "Name", name: "name", widget: "string" }
-      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Title", name: "title", widget: "string" }
+      - {
+          label: "donationTypes",
+          name: "donationTypes",
+          widget: "list",
+          allow_add: true,
+          fields:
+            [
+              { label: "header", name: "header", widget: "string" },
+              { label: "content", name: "content", widget: "string" },
+            ],
+        }
 # - name: "blog"
 #   label: "Blog"
 #   folder: "/content/blog"
