@@ -1,71 +1,75 @@
-.ui.segment {
-    background-color: grey !important;
+#landingpageContent.landingpageContentContainer {
+    padding-bottom: 7% !important;
+    background: grey !important;
 }
-.ui.header:first-child {
-    margin-top: 15%;
-    font-family: Roboto;
+
+.landingpageName {
+    color: white !important;
+    margin-top: 15% !important;
+    font-family: Roboto !important;
     font-weight: bolder;
-    font-size: 72px;
+    font-size: 72px !important;
     margin-bottom: 0;
-    color: white;
-}
-.ui.header.slogan {
     text-align: center;
-    font-family: Roboto;
-    font-size: 42px;
+}
+
+.landingpageSlogan {
+    text-align: center;
+    font-family: Roboto !important;
+    font-size: 42px !important;
     font-weight: lighter;
     margin-top: 0;
-    color: white;
+    color: white !important; 
 }
-.ui.header {
-    padding: 0;
-}
-.name {
-    text-align: center;
-    
-}
-.ui.card {
+
+.landingpage.ui.card {
     width: 342px;
     height: 296px;
+    border-radius: 38px;
+    margin: 3em 5.5em;
 }
-.ui.cards > .card > .content, .ui.card > .content {
+
+.landingpage.card.content {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-content: center;
 }
-.ui.cards > .card > .content > .description, .ui.card > .content > .description {
+
+.landingpage.description.a {
     font-size: 36px;
     text-align: center;
     margin: 1em 1em;
     line-height: 1.5;
     font-family: Roboto;
     font-weight: bold;
+    color: #4B9CD3 !important;
 }
-.ui.cards > .card > .content > .description.a {
-    color: #4B9CD3;
+
+.landingpage.description.b {
+    font-size: 36px;
+    text-align: center;
+    margin: 1em 1em;
+    line-height: 1.5;
+    font-family: Roboto;
+    font-weight: bold;
+    color: #13294B !important;
 }
-.ui.cards > .card > .content > .description.b {
-    color: #13294B;
-}
-.ui.cards {
-    margin-bottom: 9%;
-}
-.ui.cards > .card {
-    margin: 3em 5.5em;
-    border-radius: 38px;
-}
-.ui.button {
+
+.landingpage.ui.button.a {
     border-radius: 30px;
     padding: 10%;
     font-size: 20px;
     font-family: Roboto;
-}
-.ui.button.a {
     background-color: #4B9CD3;
     color: white;
 }
-.ui.button.b {
+
+.landingpage.ui.button.b {
+    border-radius: 30px;
+    padding: 10%;
+    font-size: 20px;
+    font-family: Roboto;
     background-color: #13294B;
     color: white;
 }

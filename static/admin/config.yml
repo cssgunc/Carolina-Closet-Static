@@ -26,10 +26,12 @@ collections:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "SubHeader", name: "subHeader", widget: "string" }
       - {
-          label: "TypeOfDonation",
-          name: "typeOfDonation",
+          label: "donationTypes",
+          name: "donationTypes",
           widget: "list",
           allow_add: true,
+          field:
+            { label: "donationType", name: "donationType", widget: "string" },
         }
   - name: "aboutUsMissionVision"
     label: "aboutUsMissionVision"

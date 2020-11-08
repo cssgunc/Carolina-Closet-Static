@@ -6,28 +6,29 @@ function LandingPage() {
 
 
     return (
+       
+            <div style={{ width: "100%" }}>
+                
+                    <Segment padded='very' id="landingpageContent" className="landingpageContentContainer">
+                        <Container className="landingpageContainer">
+                            <Header as="h1" className="landingpageName">Carolina Closet</Header>
+                            <Header as="h3" className="landingpageSlogan"> "Dressing Tar Heels for Success"</Header>
 
-        <div style={{ width: "100%" }}>
-
-            <Segment padded='very' className="contentContainer">
-                <Container>
-                    <Header as="h1" className="name">Carolina Closet</Header>
-                    <Header as="h3" className="slogan"> "Dressing Tar Heels for Success"</Header>
-
-                    <div className="ui centered cards">
-                        <div className="ui card">
-                            <div className="content">
-                                <div className="description a">Are you a Student?</div>
-                                <button className="ui button a">
-                                    Browse the inventory
+                            <div className="ui centered cards">
+                                <div className="landingpage ui card">
+                                    <div className="landingpage card content">
+                                        <div className="landingpage description a">Are you a Student?</div>
+                                        <button className="landingpage ui button a">
+                                            Browse the inventory
                                         </button>
-                            </div>
-                        </div>
-                        <div className="ui card">
-                            <div className="content">
-                                <div className="description b">Volunteer or Donor?</div>
-                                <button className="ui button b">
-                                    Learn More
+                                    </div>
+                                </div>
+                                <div className="landingpage ui card">
+                                    <div className="landingpage card content">
+                                        <div className="landingpage description b">Volunteer or Donor?</div>
+                                        <button className="landingpage ui button b">
+                                            Learn More
+
                                         </button>
                             </div>
                         </div>
