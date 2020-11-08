@@ -54,7 +54,7 @@ collections:
       - {
         label: "PartnersList",
         name: "partnersList", 
-        widget: list
+        widget: list,
         allow_add: true,
           fields: 
           - { label: "Name", name: "name", widget: "string" }
