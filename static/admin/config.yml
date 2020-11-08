@@ -5,23 +5,7 @@ backend:
 media_folder: static/img
 public_folder: /img
 publish_mode: editorial_workflow
-
 collections:
-  - name: "blog"
-    label: "Blog"
-    folder: "/content/blog"
-    create: true
-    slug: "index"
-    media_folder: ""
-    public_folder: ""
-    path: "{{title}}/index"
-    editor:
-      preview: false
-    fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Description", name: "description", widget: "string" }
-      - { label: "Body", name: "body", widget: "markdown" }
   - name: "aboutUs"
     label: "aboutUs"
     folder: "/content/blog/AboutUs"
@@ -32,14 +16,89 @@ collections:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "SubHeader", name: "SubHeader", widget: "string" }
       - { label: "about", name: "about", widget: "text" }
-  - name: "meetTheTeam"
-    label: "meetTheTeam"
-    folder: "/content/blog/meetTheTeam"
+  - name: "aboutUsDonations"
+    label: "aboutUsDonations"
+    folder: "/content/blog/AboutUsDonations"
+    create: true
+    media_folder: ""
+    public_folder: ""
+    fields:
+      - { label: "SubHeader", name: "subHeader", widget: "string" }
+      - {
+          label: "donationTypes",
+          name: "donationTypes",
+          widget: "list",
+          allow_add: true,
+          field:
+            { label: "donationType", name: "donationType", widget: "string" },
+        }
+  - name: "aboutUsMissionVision"
+    label: "aboutUsMissionVision"
+    folder: "/content/blog/AboutUsMissionVision"
+    create: true
+    media_folder: ""
+    public_folder: ""
+    fields:
+      - { label: "mission", name: "mission", widget: "text" }
+      - { label: "vision", name: "vision", widget: "text" }
+  - name: "aboutUsPartners"
+    label: "aboutUsPartners"
+    folder: "/content/blog/AboutUsPartners"
     create: true
     media_folder: ""
     public_folder: ""
     fields:
       - { label: "Title", name: "title", widget: "string" }
+      - { label: "SubHeader", name: "subHeader", widget: "string" }
+      - {
+          label: "PartnersList",
+          name: "partnersList",
+          widget: list,
+          allow_add: true,
+          fields:
+            [
+              { label: "PartnerName", name: "partnerName", widget: "string" },
+              { label: "About", name: "about", widget: "text" },
+              { label: "Image", name: "image", widget: "image" },
+            ],
+        }
+  - name: "aboutUsRentals"
+    label: "aboutUsRentals"
+    folder: "/content/blog/AboutUsRentals"
+    create: true
+    media_folder: ""
+    public_folder: ""
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - {
+          label: "rentalTypes",
+          name: "rentalTypes",
+          widget: "list",
+          allow_add: true,
+          fields:
+            [
+              { label: "header", name: "header", widget: "string" },
+              { label: "content", name: "content", widget: "string" },
+            ],
+        }
+# - name: "blog"
+#   label: "Blog"
+#   folder: "/content/blog"
+#   create: true
+#   slug: "index"
+#   media_folder: ""
+#   public_folder: ""
+#   path: "{{title}}/index"
+#   editor:
+#     preview: false
+#   fields:
+#     - { label: "Title", name: "title", widget: "string" }
+#     - { label: "Publish Date", name: "date", widget: "datetime" }
+#     - { label: "Description", name: "description", widget: "string" }
+#     - { label: "Body", name: "body", widget: "markdown" }
+   - name: "meetTheTeam"
+    label: "meetTheTeam"
+    folder: "/content/blog/meetTheTeam"     - { label: "Title", name: "title", widget: "string" }
       - { label: "numOfMembers", name: "numOfMembers", widget: "string" }
       - { label: "names", name: "names", widget: "string" }
       - { label: "bios", name: "bios", widget: "string" }
