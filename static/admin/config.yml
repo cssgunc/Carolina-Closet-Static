@@ -96,6 +96,7 @@ collections:
             [
               { label: "name", name: "names", widget: "string" },
               { label: "bios", name: "bios", widget: "string" },
+              { label: "email", name: "email", widget: "string" },
               { label: "Image", name: "memberImage", widget: "image" },
             ],
         }
