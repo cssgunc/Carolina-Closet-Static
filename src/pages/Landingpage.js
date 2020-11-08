@@ -1,18 +1,36 @@
 import React from "react"
-import { Container, Header, Segment } from "semantic-ui-react"
-// import "../Styles/landingpage.css"
+import { Container, Header } from "semantic-ui-react"
+import "../Styles/landingpage.css"
+//import img from "../../static/images/black-concrete-wall.jpg"
+import { graphql, useStaticQuery } from "gatsby"
 
 function LandingPage() {
 
+    const data = useStaticQuery(graphql`
+    query MyLandingQuery {
+        allMarkdownRemark(filter: {fields: {slug: {eq: "/LandingPage/landing-page/"}}}) {
+          edges {
+            node {
+              frontmatter {
+                title
+                SubHeader
+                image
+              }
+            }
+          }
+        }
+      }
+    `)
+  const { allMarkdownRemark } = data // data.markdownRemark holds your post data
+  const { frontmatter } = allMarkdownRemark.edges[0].node
 
     return (
        
             <div style={{ width: "100%" }}>
-                
-                    <Segment padded='very' id="landingpageContent" className="landingpageContentContainer">
+                    <Container id="landingpageContent" className="landingpageContentContainer" style={{ backgroundImage: `url(${frontmatter.image})`}}>
                         <Container className="landingpageContainer">
-                            <Header as="h1" className="landingpageName">Carolina Closet</Header>
-                            <Header as="h3" className="landingpageSlogan"> "Dressing Tar Heels for Success"</Header>
+                            <Header as="h1" className="landingpageName">{frontmatter.title}</Header>
+                            <Header as="h3" className="landingpageSlogan">{frontmatter.SubHeader}</Header>
 
                             <div className="ui centered cards">
                                 <div className="landingpage ui card">
@@ -35,7 +53,7 @@ function LandingPage() {
                     </div>
 
                 </Container>
-            </Segment>
+            </Container>
 
 
         </div>

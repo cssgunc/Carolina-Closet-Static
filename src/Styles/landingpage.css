@@ -1,6 +1,7 @@
 #landingpageContent.landingpageContentContainer {
+    padding-top: 2% !important;
+    width: 100% !important;
     padding-bottom: 7% !important;
-    background: grey !important;
 }
 
 .landingpageName {
