@@ -23,7 +23,6 @@ collections:
     media_folder: ""
     public_folder: ""
     fields:
-      - { label: "Title", name: "title", widget: "string" }
       - { label: "SubHeader", name: "subHeader", widget: "string" }
       - {
           label: "donationTypes",
@@ -97,3 +96,9 @@ collections:
 #     - { label: "Publish Date", name: "date", widget: "datetime" }
 #     - { label: "Description", name: "description", widget: "string" }
 #     - { label: "Body", name: "body", widget: "markdown" }
+   - name: "meetTheTeam"
+    label: "meetTheTeam"
+    folder: "/content/blog/meetTheTeam"     - { label: "Title", name: "title", widget: "string" }
+      - { label: "numOfMembers", name: "numOfMembers", widget: "string" }
+      - { label: "names", name: "names", widget: "string" }
+      - { label: "bios", name: "bios", widget: "string" }

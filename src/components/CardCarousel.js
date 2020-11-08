@@ -3,11 +3,31 @@ import React from "react";
 import { isMobile } from "react-device-detect";
 import "../Styles/carousel.css"
 import { Container, Divider, Grid, Image, Segment } from 'semantic-ui-react';
-
-
-
+import { graphql, useStaticQuery } from "gatsby"
 
 function CardCarousel() {
+
+  /*
+  const data = useStaticQuery(graphql`
+    query MyQuery {
+      allMarkdownRemark(filter: {fields: {slug: {eq: "/MeetTheTeam/meet-the-team/"}}}) {
+        edges {
+          node {
+            frontmatter {
+              title
+              numOfMembers
+              names
+              bios
+            }
+          }
+        }
+      }
+    }
+  `)
+  const { allMarkdownRemark } = data;
+  const { frontmatter } = allMarkdownRemark.edges[0].node;
+  */
+
   const data = [
     {
       'name': 'Larry',
