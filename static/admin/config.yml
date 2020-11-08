@@ -72,8 +72,8 @@ collections:
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - {
-          label: "donationTypes",
-          name: "donationTypes",
+          label: "rentalTypes",
+          name: "rentalTypes",
           widget: "list",
           allow_add: true,
           fields:

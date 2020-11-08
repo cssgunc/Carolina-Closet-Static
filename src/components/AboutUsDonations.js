@@ -1,5 +1,5 @@
 import React from "react"
-import { Container, GridColumn, Grid, Header, Segment, Rail, List, Embed, GridRow } from 'semantic-ui-react'
+import { Container, GridColumn, Grid, Header, Segment, Rail, List, Embed, GridRow, Item } from 'semantic-ui-react'
 import { graphql, useStaticQuery } from "gatsby"
 
 function AboutUsDonation() {
@@ -24,7 +24,7 @@ function AboutUsDonation() {
 
     console.log(frontmatter)
     const donationItems = frontmatter.donationTypes.map((item) => {
-        return (<List.Item  >
+        return (<List.Item key={Item} >
             {item}
         </List.Item >)
 
