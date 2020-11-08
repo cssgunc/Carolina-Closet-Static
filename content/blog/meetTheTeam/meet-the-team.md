@@ -6,4 +6,5 @@ teamMember:
       free time he plays soccer at hooker fields and is a project manager for
       CSSG.
     memberImage: /img/backpacking.jpg
+    email: winek@unc.edu
 ---
