@@ -81,6 +81,24 @@ collections:
               { label: "content", name: "content", widget: "string" },
             ],
         }
+  - name: "meetTheTeam"
+    label: "MeetTheTeam"
+    folder: "/content/blog/meetTheTeam"
+    create: true
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - {
+          label: "TeamMember",
+          name: "teamMember",
+          widget: "list",
+          allow_add: true,
+          fields:
+            [
+              { label: "name", name: "names", widget: "string" },
+              { label: "bios", name: "bios", widget: "string" },
+              { label: "Image", name: "memberImage", widget: "image" },
+            ],
+        }
 # - name: "blog"
 #   label: "Blog"
 #   folder: "/content/blog"
@@ -96,9 +114,3 @@ collections:
 #     - { label: "Publish Date", name: "date", widget: "datetime" }
 #     - { label: "Description", name: "description", widget: "string" }
 #     - { label: "Body", name: "body", widget: "markdown" }
-   - name: "meetTheTeam"
-    label: "meetTheTeam"
-    folder: "/content/blog/meetTheTeam"     - { label: "Title", name: "title", widget: "string" }
-      - { label: "numOfMembers", name: "numOfMembers", widget: "string" }
-      - { label: "names", name: "names", widget: "string" }
-      - { label: "bios", name: "bios", widget: "string" }
