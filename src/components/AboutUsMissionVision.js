@@ -1,15 +1,36 @@
 import React from "react"
-import { Container, GridColumn, Grid, Header, Segment, Rail, List, Embed, GridRow, Image, ImageGroup } from 'semantic-ui-react'
+import { Container, Header, Segment } from 'semantic-ui-react'
+import { graphql, useStaticQuery } from "gatsby"
 
 
 function AboutUsMissionVision() {
+
+    const data = useStaticQuery(graphql`
+    query VMQuery {
+        allMarkdownRemark(filter: {fields: {slug: {glob: "/AboutUsMissionVision/*"}}}) {
+          edges {
+            node {
+              frontmatter {
+                vision,
+                mission
+              }
+            }
+          }
+        }
+      }
+    `)
+
+    const { allMarkdownRemark } = data // data.markdownRemark holds your post data
+    const { frontmatter } = allMarkdownRemark.edges[0].node
+    console.log(frontmatter)
+
     return (
         <Segment>
             <Container text>
                 <Header size="huge">Vision</Header>
-                <p>The objective of Carolina Closet shall be to bridge a gap in the accessibility to resources, specifically business attire, to disadvantaged students and faculty at UNC through the acquisition and distribution of donated professional apparel. This organization seeks to deconstruct barriers to professionalism resulting from wealth disparities that may inhibit the pursuit of professional opportunities.</p>
+                <p>{frontmatter.vision}</p>
                 <Header size="huge">Mission</Header>
-                <p>To provide graduate and undergraduate students and faculty with access to business casual and business professional apparel in effort to ensure that attire is not a barrier to the procurement and actualization of desired opportunities.</p>
+                <p>{frontmatter.mission}</p>
 
             </Container>
         </Segment>
