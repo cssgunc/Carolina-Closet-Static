@@ -1,6 +1,6 @@
 import React from "react"
 
-import { Container, GridColumn, Grid, Header, Segment, Rail, List, Embed, GridRow, Image, ImageGroup } from 'semantic-ui-react'
+import { Container, Grid, Header, Segment, GridRow, Image, ImageGroup } from 'semantic-ui-react'
 
 function AboutUsPartners() {
 

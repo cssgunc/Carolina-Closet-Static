@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, GridColumn, Grid, Header, Segment, Rail, List, Embed, GridRow, Image, ImageGroup, Ref, Sticky } from 'semantic-ui-react'
+import { Container, Header, Segment } from 'semantic-ui-react'
 import { graphql, useStaticQuery } from "gatsby"
 
 
