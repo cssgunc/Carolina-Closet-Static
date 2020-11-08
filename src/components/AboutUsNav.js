@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from 'react'
-import { isMobile } from 'react-device-detect';
-import { Container, Header, Rail } from 'semantic-ui-react'
+import { Header } from 'semantic-ui-react'
 import "semantic-ui-less/semantic.less";
-import { doc } from 'prettier';
 import AboutUsIndicator from "./AboutUsIndicator";
 
 
