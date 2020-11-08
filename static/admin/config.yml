@@ -52,14 +52,16 @@ collections:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "SubHeader", name: "subHeader", widget: "string" }
       - {
-        label: "PartnersList",
-        name: "partnersList", 
-        widget: list,
-        allow_add: true,
-          fields: 
-          - { label: "Name", name: "name", widget: "string" }
-          - { label: "About", name: "about", widget: "text" }
-          - { label: "Image", name: "image", widget: "image" }
+          label: "PartnersList",
+          name: "partnersList",
+          widget: list,
+          allow_add: true,
+          fields:
+            [
+              { label: "PartnerName", name: "partnerName", widget: "string" },
+              { label: "About", name: "about", widget: "text" },
+              { label: "Image", name: "image", widget: "image" },
+            ],
         }
   - name: "aboutUsRentals"
     label: "aboutUsRentals"
@@ -74,9 +76,11 @@ collections:
           name: "donationTypes",
           widget: "list",
           allow_add: true,
-          fields: 
-            - { label: "header", name: "header", widget: "string" }
-            - { label: "content", name: "content", widget: "string" }
+          fields:
+            [
+              { label: "header", name: "header", widget: "string" },
+              { label: "content", name: "content", widget: "string" },
+            ],
         }
 # - name: "blog"
 #   label: "Blog"
