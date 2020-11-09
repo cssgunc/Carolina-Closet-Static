@@ -101,15 +101,15 @@ collections:
             ],
         }
   - name: "LandingPage"
-  label: "LandingPage"
-  folder: "/content/blog/LandingPage/landing-page"
-  create: true
-  media_folder: ""
-  public_folder: ""
-  fields:
-    - { label: "Title", name: "title", widget: "string" }
-    - { label: "SubHeader", name: "SubHeader", widget: "string" }
-    - { label: "image", name: "image", widget: "image" }
+    label: "LandingPage"
+    folder: "/content/blog/LandingPage/landing-page"
+    create: true
+    media_folder: ""
+    public_folder: ""
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "SubHeader", name: "SubHeader", widget: "string" }
+      - { label: "LandingPageimage", name: "landingPageimage", widget: "image" }
 # - name: "blog"
 #   label: "Blog"
 #   folder: "/content/blog"
