@@ -23,14 +23,14 @@ function LandingPage() {
   //   `)
   // const { allMarkdownRemark } = data // data.markdownRemark holds your post data
   // const { frontmatter } = allMarkdownRemark.edges[0].node
-
+  //style={{ backgroundImage: `url(${frontmatter.image})` }
   return (
 
     <div style={{ width: "100%" }}>
-      <Container id="landingpageContent" className="landingpageContentContainer" style={{ backgroundImage: `url(${frontmatter.image})` }}>
+      <Container id="landingpageContent" className="landingpageContentContainer" >
         <Container className="landingpageContainer">
-          <Header as="h1" className="landingpageName">{frontmatter.title}</Header>
-          <Header as="h3" className="landingpageSlogan">{frontmatter.SubHeader}</Header>
+          <Header as="h1" className="landingpageName">frontmatter.title</Header>
+          <Header as="h3" className="landingpageSlogan">frontmatter.SubHeader</Header>
 
           <div className="ui centered cards">
             <div className="landingpage ui card">
@@ -56,7 +56,7 @@ function LandingPage() {
       </Container>
 
 
-    </div>
+    </div >
 
   )
 
