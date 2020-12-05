@@ -7,4 +7,8 @@ teamMember:
       CSSG.
     memberImage: /img/backpacking.jpg
     email: winek@unc.edu
+  - names: Jack Goldsmith
+    bios: This dude dont go to college but he is coming back after rona
+    email: jackg@gmail.com
+    memberImage: /img/backpacking.jpg
 ---
