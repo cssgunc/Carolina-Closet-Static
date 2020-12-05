@@ -104,8 +104,6 @@ collections:
     label: "LandingPage"
     folder: "/content/blog/LandingPage/landing-page"
     create: true
-    media_folder: ""
-    public_folder: ""
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "SubHeader", name: "SubHeader", widget: "string" }

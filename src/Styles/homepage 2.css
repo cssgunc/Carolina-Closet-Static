@@ -1,7 +1,12 @@
 .mainContentHeader {
-    float: right !important;
+  float: right !important;
 }
 
 .segmentBackground {
-    background-color: #000000 !important;
+  background-color: #000000 !important;
+}
+
+.emailLink {
+  text-decoration: none;
+  color: #4b9cd3 !important;
 }
