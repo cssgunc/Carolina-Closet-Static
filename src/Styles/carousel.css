@@ -1,9 +1,47 @@
-.card .segment{
-  padding: 200px;
-  background-color: #4B9CD3 !important;
+.card .segment {
+  padding: 20px;
+  background-color: #4b9cd3 !important;
 }
-  
-.slick-current .slick-active .slick-slide{
+
+.meetTheTeamHeader {
+  font-size: 50px !important;
+  padding-left: 20px !important;
+  padding-right: 20px !important;
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
+  margin-bottom: 0 !important;
+  background-color: white;
+  width: fit-content;
+  box-shadow: 0 1px 2px 0 rgba(34, 36, 38, 0.15);
+  border: 1px solid rgba(34, 36, 38, 0.15);
+  border-radius: 0.28571429rem;
+}
+
+.slick-current .slick-active .slick-slide {
   margin: auto;
 }
-  
+
+.meetTheTeamImage {
+  width: 100% !important;
+  height: auto !important;
+  padding-left: 10px !important;
+  padding-right: 10px !important;
+  margin-bottom: 0px !important;
+}
+
+.meetTheTeamImageContainer {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+.meetTheTeamText {
+  justify-content: center;
+  display: flex;
+  margin-top: 50px;
+}
+.meetTheTeamTextMobile {
+  justify-content: center;
+  display: flex;
+  margin-top: 10px;
+  padding: 10px !important;
+}

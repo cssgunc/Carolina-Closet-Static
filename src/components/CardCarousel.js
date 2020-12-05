@@ -2,7 +2,7 @@ import Slider from "react-slick";
 import React from "react";
 import { isMobile } from "react-device-detect";
 import "../Styles/carousel.css"
-import { Container, Divider, Grid, Image, Segment } from 'semantic-ui-react';
+import { Container, Divider, Grid, Image, Segment, Header } from 'semantic-ui-react';
 import { graphql, useStaticQuery } from "gatsby"
 
 function CardCarousel() {
@@ -55,48 +55,58 @@ function CardContent(props) {
 
   if (!isMobile) {
     return (
-      <Segment raised>
+      <Segment raised style={{ marginTop: "0" }}>
         <Grid columns={2} relaxed='very'>
-          <Grid.Column>
-            <p>
-              <Image src={props.img} />
-            </p>
+          <Grid.Column className="meetTheTeamImageContainer">
+
+            <Image className="meetTheTeamImage" src={props.img} />
+
           </Grid.Column>
-          <Grid.Column>
-            <Container textAlign='center'>
-              <strong> Name: {props.name} </strong>
+          <Grid.Column className="meetTheTeamText">
+            <Container>
+              <Header size="huge" style={{ color: "white", fontSize: "45px" }}>{props.name}</Header>
               <Divider />
-              <p> Email: {props.email}</p>
+              <Header style={{ color: "white" }}>{props.email}</Header>
               <Divider />
-              <p> Profile: {props.bio}</p>
+              <Header style={{ color: "white" }}>Project Manager</Header>
+              <Divider />
+              <Header underlined style={{ color: "white" }}>About {props.name.split(" ")[0]}:</Header>
+              <Container text style={{ color: "white", width: '100%', paddingLeft: '5px' }}>
+                {props.bio}
+
+              </Container>
             </Container>
           </Grid.Column>
         </Grid>
 
         <Divider vertical></Divider>
-      </Segment>
+      </Segment >
     );
   }
 
   if (isMobile) {
     return (
       <Segment raised>
-        <Grid divided='vertically' relaxed='very'>
-          <Grid.Row>
-            <Image src={props.img} />
+        <Grid divided='vertically' relaxed='very' >
+          <Grid.Row className="meetTheTeamImageContainer" >
+            <Image className="meetTheTeamImage" src={props.img} />
           </Grid.Row>
-          <Divider />
-          <Grid.Row>
+          <Grid.Row className="meetTheTeamTextMobile">
             <Container>
-              <strong> Name: {props.name} </strong>
+              <Header size="huge" style={{ color: "white", fontSize: "40px" }} >{props.name}</Header>
               <Divider />
-              <p> Email: {props.email}</p>
+              <Header style={{ color: "white" }}>{props.email}</Header>
               <Divider />
-              <p> Profile: {props.bio}</p>
+              <Header style={{ color: "white" }}>Project Manager</Header>
+              <Divider />
+              <Header underlined style={{ color: "white" }}>About {props.name.split(" ")[0]}:</Header>
+              <Container text style={{ color: "white", width: '100%', paddingLeft: '5px' }}>
+                {props.bio}
+              </Container>
             </Container>
-          </Grid.Row>
-        </Grid>
-      </Segment>
+          </Grid.Row >
+        </Grid >
+      </Segment >
 
     );
   }

@@ -4,6 +4,7 @@ import 'semantic-ui-css/semantic.min.css'
 import CardCarousel from "../components/CardCarousel";
 import AdamsNavbar from "../components/AdamsNavbar"
 import { isMobile } from 'react-device-detect';
+import "../Styles/carousel.css"
 
 function MeetTheTeam() {
 
@@ -16,10 +17,10 @@ function MeetTheTeam() {
                 is responsible for any logic needed in the navbar.
             */}
 
-            <AdamsNavbar isMobile={isMobile} page="meetTheTeam"/>
-            <Container style={{marginTop: "20px"}}>
-                <Header as="h1" content="Meet the Team"/>
-                <CardCarousel/>
+            <AdamsNavbar isMobile={isMobile} page="meetTheTeam" />
+            <Container style={{ marginTop: "20px" }}>
+                <Header as="h1" content="Meet the Team" className="meetTheTeamHeader" raised />
+                <CardCarousel />
             </Container>
 
 
