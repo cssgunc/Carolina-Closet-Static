@@ -10,7 +10,7 @@
   background-size: cover;
   background-position-x: left;
   background-position-y: 25%;
-  height: calc(100vh - 100px);
+  max-height: calc(100vh - 100px);
 }
 .landingpageContainer {
   width: fit-content !important;
