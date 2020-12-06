@@ -47,7 +47,7 @@ function AdamsNavbar(props) {
                 <img src={img} className="navImg"></img>
                 <nav className="nav">
                     <div className="navItemContainer">
-                        <h1 id="home" className="navItem" ><Link className="links" to="/Homepage">Home</Link></h1>
+                        <h1 id="home" className="navItem" ><Link className="links" to="/">Home</Link></h1>
                         {divs[0]}
                     </div>
                     <div className="navItemContainer">
