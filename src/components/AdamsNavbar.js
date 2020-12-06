@@ -59,7 +59,7 @@ function AdamsNavbar(props) {
                         {divs[2]}
                     </div>
                     <div className="navItemContainer">
-                        <h1 className="navItem"> Rentals</h1>
+                        <h1 className="navItem"> <Link className="links" to="/FAQ">FAQ</Link></h1>
                         {divs[3]}
                     </div>
 
