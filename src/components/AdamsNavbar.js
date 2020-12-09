@@ -77,19 +77,19 @@ function AdamsNavbar(props) {
                     moibleMenuTransition.map(({ item, key, props }) =>
                         item && <animated.div key={key} className="mobileMenu" style={props}><div className="mobileMenu">
                             <div className="mobileItemContainer">
-                                <h1 className="mobileItem" > <Link to="/">Home</Link></h1>
+                                <h1 className="mobileItem" > <Link className="links" to="/">Home</Link></h1>
 
                             </div>
                             <div className="mobileItemContainer">
-                                <h1 className="mobileItem" > <Link to="/AboutUs">About Us</Link></h1>
+                                <h1 className="mobileItem" > <Link className="links" to="/AboutUs">About Us</Link></h1>
 
                             </div>
                             <div className="mobileItemContainer">
-                                <h1 className="mobileItem" > <Link to="/MeetTheTeam">Meet The Team</Link></h1>
+                                <h1 className="mobileItem" > <Link className="links" to="/MeetTheTeam">Meet The Team</Link></h1>
 
                             </div>
                             <div className="mobileItemContainer">
-                                <h1 className="mobileItem" ><Link to="/FAQ">FAQ</Link></h1>
+                                <h1 className="mobileItem" ><Link className="links" to="/FAQ">FAQ</Link></h1>
 
                             </div>
 

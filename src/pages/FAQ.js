@@ -13,7 +13,7 @@ import { isMobile } from "react-device-detect";
 function FAQ() {
     return (
         <div style={{ display: "100%" }}>
-            <AdamsNavbar page="FAQ"></AdamsNavbar>
+            <AdamsNavbar page="FAQ" isMobile={isMobile}></AdamsNavbar>
             <Container>
                 <segment>
                     <Container text>
