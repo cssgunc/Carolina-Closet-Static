@@ -39,43 +39,49 @@ function AboutUs() {
         <Ref innerRef={stickyRef}>
 
 
-            <div style={{ width: "100%" }} >
-                <Sticky ref={stickyRef}>
-                    <AdamsNavbar isMobile={isMobile} page="aboutUs"></AdamsNavbar>
-                </Sticky>
-                <Grid columns={2} centered >
+            <div style={{ width: "100vw" }} >
+                <Grid >
+                    <GridRow columns={1}>
+                        <GridColumn>
+                            <Sticky ref={stickyRef}>
+                                <AdamsNavbar isMobile={isMobile} page="aboutUs"></AdamsNavbar>
+                            </Sticky>
+                        </GridColumn>
 
-                    <GridColumn width={3} only="computer">
-                        <Sticky context={stickyRef}>
-                            <AboutUsNav arrRefs={arrRefs}></AboutUsNav>
+                    </GridRow>
+                    <GridRow columns={2} >
+                        <GridColumn computer={3} only="computer" floated="left">
+                            <Sticky context={stickyRef} offset={100}>
+                                <AboutUsNav arrRefs={arrRefs}></AboutUsNav>
+                            </Sticky>
+                        </GridColumn>
+                        <GridColumn computer={13} mobile={16} floated="right">
 
-                        </Sticky>
-                    </GridColumn>
+                            <Container>
+                                <Ref innerRef={generalRef}>
+                                    <AboutUsGeneral ></AboutUsGeneral>
+                                </Ref>
+                                <Ref innerRef={donationsRef}>
+                                    <AboutUsDonations ></AboutUsDonations>
+                                </Ref>
+                                <Ref innerRef={missionRef}>
+                                    <AboutUsMissionVision ></AboutUsMissionVision>
+                                </Ref>
+                                <Ref innerRef={partnersRef}>
+                                    <AboutUsPartners ></AboutUsPartners>
+                                </Ref>
+                                <Ref innerRef={rentalsRef}>
+                                    <AboutUsRentals></AboutUsRentals>
+
+                                </Ref>
+                            </Container >
 
 
-                    <GridColumn width={isMobile ? 16 : 13} >
-
-                        <Container>
-                            <Ref innerRef={generalRef}>
-                                <AboutUsGeneral ></AboutUsGeneral>
-                            </Ref>
-                            <Ref innerRef={donationsRef}>
-                                <AboutUsDonations ></AboutUsDonations>
-                            </Ref>
-                            <Ref innerRef={missionRef}>
-                                <AboutUsMissionVision ></AboutUsMissionVision>
-                            </Ref>
-                            <Ref innerRef={partnersRef}>
-                                <AboutUsPartners ></AboutUsPartners>
-                            </Ref>
-                            <Ref innerRef={rentalsRef}>
-                                <AboutUsRentals></AboutUsRentals>
-
-                            </Ref>
-                        </Container >
+                        </GridColumn>
 
 
-                    </GridColumn>
+                    </GridRow>
+
                 </Grid>
             </div >
         </Ref >)

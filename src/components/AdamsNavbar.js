@@ -63,7 +63,7 @@ function AdamsNavbar(props) {
     } else {
         return (
             <div style={{
-                position: "relative", overflowY: 'hidden'
+                position: "relative"
             }}>
                 <div className="mobileNav">
                     <img src={img} className="mobileImg"></img>
@@ -77,19 +77,19 @@ function AdamsNavbar(props) {
                     moibleMenuTransition.map(({ item, key, props }) =>
                         item && <animated.div key={key} className="mobileMenu" style={props}><div className="mobileMenu">
                             <div className="mobileItemContainer">
-                                <h1 className="mobileItem" > Home</h1>
+                                <h1 className="mobileItem" > <Link to="/">Home</Link></h1>
 
                             </div>
                             <div className="mobileItemContainer">
-                                <h1 className="mobileItem" > About Us</h1>
+                                <h1 className="mobileItem" > <Link to="/AboutUs">About Us</Link></h1>
 
                             </div>
                             <div className="mobileItemContainer">
-                                <h1 className="mobileItem" > Meet The Team</h1>
+                                <h1 className="mobileItem" > <Link to="/MeetTheTeam">Meet The Team</Link></h1>
 
                             </div>
                             <div className="mobileItemContainer">
-                                <h1 className="mobileItem" > Rentals</h1>
+                                <h1 className="mobileItem" ><Link to="/FAQ">FAQ</Link></h1>
 
                             </div>
 

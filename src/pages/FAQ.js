@@ -5,6 +5,8 @@ import "../Styles/aboutUs.css";
 import AboutUsNav from '../components/AboutUsNav'
 import "semantic-ui-less/semantic.less";
 import { Container, GridColumn, Grid, Header, Segment, Rail, List, Image, ImageGroup } from 'semantic-ui-react'
+import { isMobile } from "react-device-detect";
+
 //import {Image from 'semantic-ui-react'
 //there was a container afetr line 20 or the second segment but I took it out
 
