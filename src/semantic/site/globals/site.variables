@@ -4,4 +4,4 @@
 
 @blue: #4B9CD3;
 @white: #ffffff !important;
-@pageBackground: #eff0f1;
+@pageBackground: #ffffff;

@@ -19,7 +19,7 @@ function MeetTheTeam() {
 
             <AdamsNavbar isMobile={isMobile} page="meetTheTeam" />
             <Container style={{ marginTop: "20px" }}>
-                <Header as="h1" content="Meet the Team" className="meetTheTeamHeader" raised />
+                <Header as="h1" content="Meet the Team" className="meetTheTeamHeader" />
                 <CardCarousel />
             </Container>
 
