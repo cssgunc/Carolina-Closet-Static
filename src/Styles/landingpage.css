@@ -10,13 +10,39 @@
   background-size: cover;
   background-position-x: left;
   background-position-y: 25%;
-  max-height: calc(100vh - 100px);
+  height: calc(100vh - 100px);
 }
+
+#mobileLandingpageContent {
+  padding-top: 15% !important;
+  width: 100% !important;
+  padding-bottom: 7% !important;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: baseline;
+  align-items: baseline;
+  background-size: cover;
+  margin-left: 0 !important;
+  background-position-x: right;
+  background-position-y: 25%;
+  height: calc(100vh - 70px);
+}
+
 .landingpageContainer {
   width: fit-content !important;
   margin-left: 10% !important;
   margin-right: auto !important;
   margin-top: 10%;
+}
+
+.mobileLandingPageContainer {
+  width: auto !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  margin-top: 10%;
+  display: flex;
+  justify-content: center;
 }
 
 .landingpageName {
@@ -31,6 +57,7 @@
   padding: 20px !important;
   background-color: white;
   margin: 0px !important;
+  border-radius: 0.28571429rem;
 }
 
 .landingpageSlogan {
@@ -44,6 +71,36 @@
   padding: 20px !important;
   background-color: #4b9cd3;
   margin: 0px !important;
+  border-radius: 0.28571429rem;
+}
+
+.mobileLandingpageName {
+  color: #4b9cd3 !important;
+  margin-top: 15% !important;
+  font-family: Roboto !important;
+  font-weight: bolder;
+  font-size: 40px !important;
+  margin-bottom: 0;
+  text-align: center;
+  width: fit-content;
+  padding: 10px !important;
+  background-color: white;
+  margin: 0px !important;
+  border-radius: 0.28571429rem;
+}
+
+.mobileLandingpageSlogan {
+  text-align: center;
+  font-family: Roboto !important;
+  font-size: 22px !important;
+  font-weight: lighter;
+  margin-top: 0;
+  color: white !important;
+  width: fit-content;
+  padding: 20px !important;
+  background-color: #4b9cd3;
+  margin: 0px !important;
+  border-radius: 0.28571429rem;
 }
 
 .landingpage.ui.card {
@@ -52,7 +109,17 @@
   display: flex;
   justify-content: space-between;
   flex-direction: row;
-  border-radius: 38px;
+
+  border-radius: 0.28571429rem;
+}
+
+.landingpage.ui.card.mobile {
+  margin-top: 60%;
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  border-radius: 0.28571429rem;
 }
 
 .landingpage.card.content {
@@ -72,8 +139,28 @@
   color: #4b9cd3 !important;
 }
 
+.landingpage.description.a.mobile {
+  font-size: 26px;
+  text-align: center;
+  margin: 0.2em 0.2em;
+  line-height: 1.5;
+  font-family: Roboto;
+  font-weight: bold;
+  color: #4b9cd3 !important;
+}
+
 .landingpage.description.b {
   font-size: 36px;
+  text-align: center;
+  margin: 0.2em 0.2em;
+  line-height: 1.5;
+  font-family: Roboto;
+  font-weight: bold;
+  color: #13294b !important;
+}
+
+.landingpage.description.b.mobile {
+  font-size: 26px;
   text-align: center;
   margin: 0.2em 0.2em;
   line-height: 1.5;
@@ -92,6 +179,16 @@
   background-color: #4b9cd3;
   color: white;
 }
+.landingpage.ui.button.a.mobile {
+  border-radius: 30px;
+  padding-left: 10%;
+  padding-right: 10%;
+  width: fit-content;
+  font-size: 15px;
+  font-family: Roboto;
+  background-color: #4b9cd3;
+  color: white;
+}
 
 .landingpage.ui.button.b {
   border-radius: 30px;
@@ -99,6 +196,16 @@
   padding-right: 10%;
   width: fit-content;
   font-size: 20px;
+  font-family: Roboto;
+  background-color: #13294b;
+  color: white;
+}
+.landingpage.ui.button.b.mobile {
+  border-radius: 30px;
+  padding-left: 10%;
+  padding-right: 10%;
+  width: fit-content;
+  font-size: 15px;
   font-family: Roboto;
   background-color: #13294b;
   color: white;
