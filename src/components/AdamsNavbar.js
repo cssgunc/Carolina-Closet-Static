@@ -8,7 +8,7 @@ import { Link } from "gatsby"
 function AdamsNavbar(props) {
     const [isExpanded, setIsExpanded] = useState(false);
 
-    const moileMenuTransition = useTransition(isExpanded, null, {
+    const moibleMenuTransition = useTransition(isExpanded, null, {
         from: { position: 'absolute', transform: 'translateX(100%)' },
         enter: { transform: 'translateX(0%)' },
         leave: { transform: 'translateX(100%)' },
@@ -27,17 +27,10 @@ function AdamsNavbar(props) {
         case "meetTheTeam":
             divs[2] = (<div className="triangle"> </div>);
             break;
-        case "rentals":
+        case "FAQ":
             divs[3] = (<div className="triangle"> </div>);
             break;
     }
-
-
-
-
-
-
-
 
 
 
@@ -69,45 +62,42 @@ function AdamsNavbar(props) {
 
     } else {
         return (
-            <div className="mobileNav">
-                <img src={img} className="mobileImg"></img>
-                <h1 className="mobileHeader">Carolina Closet</h1>
-                <FontAwesomeIcon className="FA" icon={faBars} onClick={() => setIsExpanded(!isExpanded)} />
+            <div style={{
+                position: "relative"
+            }}>
+                <div className="mobileNav">
+                    <img src={img} className="mobileImg"></img>
+                    <h1 className="mobileHeader">Carolina Closet</h1>
+                    <FontAwesomeIcon className="FA" icon={faBars} onClick={() => setIsExpanded(!isExpanded)} />
+
+                    <i className="fas fa-bars"></i>
+                </div >
                 {
 
-                    moileMenuTransition.map(({ item, key, props }) =>
+                    moibleMenuTransition.map(({ item, key, props }) =>
                         item && <animated.div key={key} className="mobileMenu" style={props}><div className="mobileMenu">
-
-
                             <div className="mobileItemContainer">
-                                <h1 className="mobileItem" > Home</h1>
+                                <h1 className="mobileItem" > <Link className="links" to="/">Home</Link></h1>
 
                             </div>
                             <div className="mobileItemContainer">
-                                <h1 className="mobileItem" > About Us</h1>
+                                <h1 className="mobileItem" > <Link className="links" to="/AboutUs">About Us</Link></h1>
 
                             </div>
                             <div className="mobileItemContainer">
-                                <h1 className="mobileItem" > Meet The Team</h1>
+                                <h1 className="mobileItem" > <Link className="links" to="/MeetTheTeam">Meet The Team</Link></h1>
 
                             </div>
                             <div className="mobileItemContainer">
-                                <h1 className="mobileItem" > Rentals</h1>
+                                <h1 className="mobileItem" ><Link className="links" to="/FAQ">FAQ</Link></h1>
 
                             </div>
 
                         </div>
-
-
-
-
-
                         </animated.div>
                     )
                 }
-                <i className="fas fa-bars"></i>
-            </div >
-
+            </ div >
         )
 
     }

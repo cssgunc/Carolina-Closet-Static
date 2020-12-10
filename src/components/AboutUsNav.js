@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Header } from 'semantic-ui-react'
+import { Header, Segment } from 'semantic-ui-react'
 import "semantic-ui-less/semantic.less";
 import AboutUsIndicator from "./AboutUsIndicator";
 
@@ -31,7 +31,7 @@ function AboutUsNav(props) {
     console.log(scrollHeight)
     return (
         <div className="aboutUsNav">
-            <div >
+            <Segment basic >
                 <div >
                     <AboutUsIndicator scroll={scrollHeight} height={props.arrRefs[0]} />
                     <Header size="huge" className="aboutUsNavItem" onClick={() => scrollToRef(props.arrRefs[0])}>
@@ -64,7 +64,7 @@ function AboutUsNav(props) {
                 </div>
 
 
-            </div>
+            </Segment>
 
         </div >
     );

@@ -76,6 +76,7 @@
 }
 .donationsHours {
   color: white !important;
+  text-align: left !important;
 }
 .aboutUsEmbed {
   margin: 0 !important;
