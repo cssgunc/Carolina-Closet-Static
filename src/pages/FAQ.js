@@ -6,6 +6,7 @@ import AboutUsNav from '../components/AboutUsNav'
 import "semantic-ui-less/semantic.less";
 import { Container, GridColumn, Grid, Header, Segment, Rail, List, Image, ImageGroup, Card } from 'semantic-ui-react'
 import { isMobile } from "react-device-detect";
+import "../Styles/carousel.css"
 
 //import {Image from 'semantic-ui-react'
 //there was a container afetr line 20 or the second segment but I took it out
@@ -42,18 +43,12 @@ function FAQ() {
     return (
         <div style={{ display: "100%" }}>
             <AdamsNavbar page="FAQ" isMobile={isMobile}></AdamsNavbar>
-            <Container>
-                <segment>
-                    <Container text>
-                        <Header style={{ margin: `3rem auto`, maxWidth: 650, padding: `0 10rem` }} as="h1">Frequently Asked Questions</Header>
-                    </Container>
-                </segment>
+            <Container style={{ marginTop: "20px" }}>
+                <Header as="h1" content="Frequent Asked Questions" className="meetTheTeamHeader" />
                 <segment>
                     <Card.Group items={items} />
-
                 </segment>
                 <ImageGroup>
-                    <Image style={{ width: '400px', position: 'absolute', right: '5%', top: '200px' }} fluid src={"/images/infographic.JPG"}></Image>
                 </ImageGroup>
 
             </Container>
