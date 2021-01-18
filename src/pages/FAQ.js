@@ -7,6 +7,7 @@ import "semantic-ui-less/semantic.less";
 import { Container, GridColumn, Grid, Header, Segment, Rail, List, Image, ImageGroup, Card } from 'semantic-ui-react'
 import { isMobile } from "react-device-detect";
 import "../Styles/carousel.css"
+import FlippedCard from "../components/FlippedCard";
 
 //import {Image from 'semantic-ui-react'
 //there was a container afetr line 20 or the second segment but I took it out
@@ -40,14 +41,18 @@ function FAQ() {
         'To the side is a helpful graphic to answer this question!',
     },
   ]
+
+ 
+  const cardLists = items.map((item) => (<Card><FlippedCard front={item.header} back={item.description}></FlippedCard></Card>));
+
   return (
     <div style={{ display: "100%" }}>
       <AdamsNavbar page="FAQ" isMobile={isMobile}></AdamsNavbar>
       <Container style={{ marginTop: "20px" }}>
         <Header as="h1" content="Frequently Asked Questions" className="meetTheTeamHeader" />
-        <segment>
-          <Card.Group items={items} />
-        </segment>
+        <Card.Group>
+          {cardLists}
+        </Card.Group>
         <ImageGroup>
         </ImageGroup>
 

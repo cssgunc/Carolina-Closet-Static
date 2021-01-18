@@ -37,6 +37,7 @@
     "netlify-cms-app": "^2.13.0",
     "prismjs": "^1.21.0",
     "react": "^16.12.0",
+    "react-card-flip": "^1.0.11",
     "react-device-detect": "^1.13.1",
     "react-dom": "^16.12.0",
     "react-helmet": "^5.2.1",
