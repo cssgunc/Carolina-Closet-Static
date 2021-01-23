@@ -129,4 +129,5 @@ collections:
           label: "Landing Page Image",
           name: "landingPageImage",
           widget: "image",
+          required: false,
         }
