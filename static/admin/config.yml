@@ -7,7 +7,7 @@ public_folder: /img
 publish_mode: editorial_workflow
 collections:
   - name: "aboutUs"
-    label: "aboutUs"
+    label: "About Us"
     folder: "/content/blog/AboutUs"
     create: true
     media_folder: ""
@@ -17,7 +17,7 @@ collections:
       - { label: "SubHeader", name: "SubHeader", widget: "string" }
       - { label: "about", name: "about", widget: "text" }
   - name: "aboutUsDonations"
-    label: "aboutUsDonations"
+    label: "About Us Donations"
     folder: "/content/blog/AboutUsDonations"
     create: true
     media_folder: ""
@@ -33,7 +33,7 @@ collections:
             { label: "donationType", name: "donationType", widget: "string" },
         }
   - name: "aboutUsMissionVision"
-    label: "aboutUsMissionVision"
+    label: "About Us Mission Vision"
     folder: "/content/blog/AboutUsMissionVision"
     create: true
     media_folder: ""
@@ -42,7 +42,7 @@ collections:
       - { label: "mission", name: "mission", widget: "text" }
       - { label: "vision", name: "vision", widget: "text" }
   - name: "aboutUsPartners"
-    label: "aboutUsPartners"
+    label: "About Us Partners"
     folder: "/content/blog/AboutUsPartners"
     create: true
     media_folder: ""
@@ -51,19 +51,19 @@ collections:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "SubHeader", name: "subHeader", widget: "string" }
       - {
-          label: "PartnersList",
+          label: "Partners List",
           name: "partnersList",
           widget: list,
           allow_add: true,
           fields:
             [
-              { label: "PartnerName", name: "partnerName", widget: "string" },
+              { label: "Partner Name", name: "partnerName", widget: "string" },
               { label: "About", name: "about", widget: "text" },
               { label: "Image", name: "image", widget: "image" },
             ],
         }
   - name: "aboutUsRentals"
-    label: "aboutUsRentals"
+    label: "About Us Rentals"
     folder: "/content/blog/AboutUsRentals"
     create: true
     media_folder: ""
@@ -71,32 +71,32 @@ collections:
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - {
-          label: "rentalTypes",
+          label: "Rental Types",
           name: "rentalTypes",
           widget: "list",
           allow_add: true,
           fields:
             [
-              { label: "header", name: "header", widget: "string" },
-              { label: "content", name: "content", widget: "string" },
+              { label: "Header", name: "header", widget: "string" },
+              { label: "Content", name: "content", widget: "string" },
             ],
         }
   - name: "meetTheTeam"
-    label: "MeetTheTeam"
+    label: "Meet The Team"
     folder: "/content/blog/meetTheTeam"
     create: true
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - {
-          label: "TeamMember",
+          label: "Team Member",
           name: "teamMember",
           widget: "list",
           allow_add: true,
           fields:
             [
-              { label: "name", name: "names", widget: "string" },
-              { label: "bios", name: "bios", widget: "string" },
-              { label: "email", name: "email", widget: "string" },
+              { label: "Name", name: "names", widget: "string" },
+              { label: "Bios", name: "bios", widget: "string" },
+              { label: "Email", name: "email", widget: "string" },
               { label: "Image", name: "memberImage", widget: "image" },
             ],
         }
@@ -107,8 +107,8 @@ collections:
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - {
-          label: "Question",
-          name: "Question",
+          label: "Questions",
+          name: "questions",
           widget: "list",
           allow_add: true,
           fields:
@@ -119,10 +119,14 @@ collections:
             ],
         }
   - name: "LandingPage"
-    label: "LandingPage"
+    label: "Landing Page"
     folder: "/content/blog/LandingPage/landing-page"
     create: true
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "SubHeader", name: "SubHeader", widget: "string" }
-      - { label: "LandingPageimage", name: "landingPageimage", widget: "image" }
+      - {
+          label: "Landing Page Image",
+          name: "landingPageImage",
+          widget: "image",
+        }
