@@ -42,13 +42,18 @@ function FAQ() {
     },
   ]
 
- 
-  const cardLists = items.map((item) => (<Card><FlippedCard front={item.header} back={item.description}></FlippedCard></Card>));
+
+  const cardLists = items.map((item) => (
+    <Card>
+      <FlippedCard
+        front={item.header} back={item.description}>
+      </FlippedCard>
+    </Card>));
 
   return (
     <div style={{ display: "100%" }}>
       <AdamsNavbar page="FAQ" isMobile={isMobile}></AdamsNavbar>
-      <Container style={{ marginTop: "20px" }}>
+      <Container style={{ marginTop: "20px" }} >
         <Header as="h1" content="Frequently Asked Questions" className="meetTheTeamHeader" />
         <Card.Group>
           {cardLists}

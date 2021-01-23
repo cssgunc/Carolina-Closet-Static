@@ -5,6 +5,7 @@ import { useTransition, animated } from 'react-spring'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
 import { Link } from "gatsby"
+import { Ref } from "semantic-ui-react"
 function AdamsNavbar(props) {
     const [isExpanded, setIsExpanded] = useState(false);
 
@@ -13,6 +14,27 @@ function AdamsNavbar(props) {
         enter: { transform: 'translateX(0%)' },
         leave: { transform: 'translateX(100%)' },
     })
+
+    function handleNavClick() {
+
+        //if the menu is not expanded scroll to location
+        if (!isExpanded && props.mobileNavPosition) {
+            console.log(props.mobileNavPosition)
+            document.body.scrollTo(
+                {
+                    top: props.mobileNavPosition.current.offsetTop,
+                    left: 0,
+                    behavior: 'smooth'
+                });
+        }
+        setIsExpanded(!isExpanded)
+
+
+    }
+
+
+
+
 
     let divs = [null, null, null, null];
 
@@ -68,10 +90,12 @@ function AdamsNavbar(props) {
                 <div className="mobileNav">
                     <img src={img} className="mobileImg"></img>
                     <h1 className="mobileHeader">Carolina Closet</h1>
-                    <FontAwesomeIcon className="FA" icon={faBars} onClick={() => setIsExpanded(!isExpanded)} />
+                    <FontAwesomeIcon className="FA" icon={faBars} onClick={() => handleNavClick()} />
 
                     <i className="fas fa-bars"></i>
                 </div >
+
+
                 {
 
                     moibleMenuTransition.map(({ item, key, props }) =>

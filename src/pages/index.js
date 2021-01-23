@@ -1,9 +1,9 @@
-import React from "react"
+import React, { useState } from "react"
 import AdamsNavbar from "../components/AdamsNavbar"
 import "../Styles/homepage.css";
 import { isMobile } from 'react-device-detect';
 import "semantic-ui-less/semantic.less";
-import { Container, Header, Segment, Embed, Grid, GridRow, GridColumn, List } from 'semantic-ui-react';
+import { Container, Header, Segment, Embed, Grid, GridRow, GridColumn, List, Ref } from 'semantic-ui-react';
 import { TwitterTimelineEmbed } from 'react-twitter-embed'
 import AboutUsDonations from "../components/AboutUsDonations"
 import LandingPage from "./Landingpage"
@@ -14,11 +14,16 @@ import MapAndHours from "../components/MapAndHours";
 
 function Homepage(props) {
 
+    const mobileNavPosition = useState(null)
+
     return (
         <div style={{ width: "100vw", marginBottom: "30px", padding: 0 }}>
             <LandingPage></LandingPage>
+            <Ref innerRef={mobileNavPosition}>
+                <AdamsNavbar isMobile={isMobile} page="home" mobileNavPosition={mobileNavPosition}></AdamsNavbar>
+            </Ref>
 
-            <AdamsNavbar isMobile={isMobile} page="home"></AdamsNavbar>
+
             <Container>
                 <Segment className="segmentBackground">
                     <Container text>

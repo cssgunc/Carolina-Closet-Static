@@ -7,6 +7,7 @@ import { graphql, useStaticQuery } from "gatsby"
 
 import { isMobile } from "react-device-detect";
 
+
 function LandingPage() {
 
   const data = useStaticQuery(graphql`

@@ -55,7 +55,7 @@ function CardContent(props) {
 
   if (!isMobile) {
     return (
-      <Segment raised style={{ marginTop: "0" }}>
+      <Segment className="meetTheTeamCards" raised style={{ marginTop: "0", padding: "20px" }} color="blue" inverted>
         <Grid columns={2} relaxed='very'>
           <Grid.Column className="meetTheTeamImageContainer">
 
@@ -71,7 +71,7 @@ function CardContent(props) {
               <Header style={{ color: "white" }}>Project Manager</Header>
               <Divider />
               <Header underlined style={{ color: "white" }}>About {props.name.split(" ")[0]}:</Header>
-              <Container text style={{ color: "white", width: '100%', paddingLeft: '5px' }}>
+              <Container text style={{ color: "white", width: '100%', paddingLeft: '5px', paddingRight: "10px" }}>
                 {props.bio}
 
               </Container>
@@ -86,7 +86,7 @@ function CardContent(props) {
 
   if (isMobile) {
     return (
-      <Segment raised>
+      <Segment raised color="blue" inverted>
         <Grid divided='vertically' relaxed='very' >
           <Grid.Row className="meetTheTeamImageContainer" >
             <Image className="meetTheTeamImage" src={props.img} />

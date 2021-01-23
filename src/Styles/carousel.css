@@ -1,4 +1,4 @@
-.card .segment {
+.meetTheTeamCards {
   padding: 20px;
   background-color: #4b9cd3 !important;
 }
@@ -35,6 +35,7 @@
   justify-content: center;
   display: flex;
   margin-top: 50px;
+  padding-right: 5px;
 }
 .meetTheTeamTextMobile {
   justify-content: center;
@@ -44,7 +45,7 @@
 }
 
 .slick-next {
-  right: 5px; 
+  right: 5px;
 }
 
 .slick-prev {
