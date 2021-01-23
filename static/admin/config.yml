@@ -123,6 +123,52 @@ collections:
               },
             ],
         }
+  - name: "Home Page"
+    label: "HomePage"
+    folder: "/content/blog/HomePage"
+    create: true
+    fields:
+      - {
+          label: "About Us Content",
+          name: "aboutUsContent",
+          widget: "list",
+          allow_add: true,
+          fields:
+            [
+              {
+                label: "Section Title",
+                name: "homePageTitle",
+                widget: "string",
+              },
+              {
+                label: "Section Content",
+                name: "homePageContent",
+                widget: "string",
+              },
+            ],
+        }
+      - { label: "Resources Title", name: "resourcesTitle", widget: "string" }
+      - { label: "Email for CC", name: "mainEmail", widget: "string" }
+      - {
+          label: "Resources",
+          name: "resources",
+          widget: "list",
+          allow_add: true,
+          fields:
+            [
+              {
+                label: "Resource Text",
+                name: "resourceText",
+                widget: "string",
+              },
+              {
+                label: "Resource Link",
+                name: "resourceLink",
+                widget: "string",
+              },
+            ],
+        }
+      - { label: "About Us Header", name: "aboutUsHeader", widget: "string" }
   - name: "LandingPage"
     label: "Landing Page"
     folder: "/content/blog/LandingPage/landing-page"

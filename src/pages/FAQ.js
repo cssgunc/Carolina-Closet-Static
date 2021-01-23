@@ -2,9 +2,8 @@ import React from "react"
 import AdamsNavbar from "../components/AdamsNavbar"
 import "../Styles/aboutUs.css";
 //import { isMobile } from 'react-device-detect';
-import AboutUsNav from '../components/AboutUsNav'
 import "semantic-ui-less/semantic.less";
-import { Container, GridColumn, Grid, Header, Segment, Rail, List, Image, ImageGroup, Card } from 'semantic-ui-react'
+import { Container, Header, ImageGroup, Card } from 'semantic-ui-react'
 import { isMobile } from "react-device-detect";
 import "../Styles/carousel.css"
 import FlippedCard from "../components/FlippedCard";

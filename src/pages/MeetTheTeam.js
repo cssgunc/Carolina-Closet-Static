@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Header, Message, Segment } from "semantic-ui-react";
+import { Container, Header } from "semantic-ui-react";
 import 'semantic-ui-css/semantic.min.css'
 import CardCarousel from "../components/CardCarousel";
 import AdamsNavbar from "../components/AdamsNavbar"

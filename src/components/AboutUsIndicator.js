@@ -3,7 +3,7 @@ import React from "react";
 
 function AboutUsIndicator(props) {
 
-    if (props.height.current == undefined) {
+    if (props.height.current === undefined) {
         return null;
     }
 

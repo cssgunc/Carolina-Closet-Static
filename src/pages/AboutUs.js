@@ -4,13 +4,12 @@ import "../Styles/aboutUs.css";
 import { isMobile } from 'react-device-detect';
 import AboutUsNav from '../components/AboutUsNav'
 import "semantic-ui-less/semantic.less";
-import { Container, GridColumn, Grid, Header, Segment, Rail, List, Embed, GridRow, Image, ImageGroup, Ref, Sticky } from 'semantic-ui-react'
+import { Container, GridColumn, Grid, GridRow, Ref, Sticky } from 'semantic-ui-react'
 import AboutUsDonations from "../components/AboutUsDonations"
 import AboutUsPartners from "../components/AboutUsPartners"
 import AboutUsGeneral from "../components/AboutUsGeneral";
 import AboutUsMissionVision from "../components/AboutUsMissionVision"
 import AboutUsRentals from "../components/AboutUsRentals";
-import { graphql } from "gatsby"
 
 
 

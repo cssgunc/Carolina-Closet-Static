@@ -3,18 +3,24 @@ import AdamsNavbar from "../components/AdamsNavbar"
 import "../Styles/homepage.css";
 import { isMobile } from 'react-device-detect';
 import "semantic-ui-less/semantic.less";
-import { Container, Header, Segment, Embed, Grid, GridRow, GridColumn, List, Ref } from 'semantic-ui-react';
+import { Container, Header, Segment, Grid, GridColumn, List, Ref } from 'semantic-ui-react';
 import { TwitterTimelineEmbed } from 'react-twitter-embed'
-import AboutUsDonations from "../components/AboutUsDonations"
 import LandingPage from "./Landingpage"
-import MeetTheTeam from "./MeetTheTeam";
-import CardCarousel from "../components/CardCarousel";
+
 import MapAndHours from "../components/MapAndHours";
 
 
-function Homepage(props) {
+function Homepage() {
 
     const mobileNavPosition = useState(null)
+
+
+
+
+
+
+
+
 
     return (
         <div style={{ width: "100vw", marginBottom: "30px", padding: 0 }}>
@@ -30,12 +36,12 @@ function Homepage(props) {
                         <Header as="h1" size="huge" center={true} color="blue" className="mainContentHeader">A Little About us</Header>
                         <Header as="h2" style={{ color: "#13294B", textDecoration: "underline" }} sub>Our Mission</Header>
                         <Container text>
-                            <p>To provide graduate and undergraduate students and faculty with access to business casual and business professional apparel in effort to ensure that attire is not a barrier to the procurement and actualization of desired opportunities.</p>
+                            <p></p>
                         </Container>
 
                         <Header as="h2" style={{ color: "#13294B", textDecoration: "underline" }} sub>Our Vision</Header>
                         <Container text>
-                            <p>The objective of Carolina Closet shall be to bridge a gap in the accessibility to resources, specifically business attire, to disadvantaged students and faculty at UNC through the acquisition and distribution of donated professional apparel. This organization seeks to deconstruct barriers to professionalism resulting from wealth disparities that may inhibit the pursuit of professional opportunities.</p>
+                            <p></p>
                         </Container>
 
 
@@ -55,6 +61,7 @@ function Homepage(props) {
                                     allowTransparency
                                     width="100%"
                                     height="528"
+                                    title="Twitter"
                                 ></iframe>
                             </Container>
                         </Segment>
@@ -78,7 +85,7 @@ function Homepage(props) {
                     <Grid>
                         <GridColumn computer={4} mobile={16}>
                             <Header as="h2" style={{ color: "#13294B", textDecoration: "underline" }}>RESOURCES</Header>
-                            <p> mail us at <a className="emailLink">carolinaclosetunc@gmail.com</a></p>
+                            <p> mail us at <a href="mailto:carolinaclosetunc@gmail.com" className="emailLink">carolinaclosetunc@gmail.com</a></p>
 
                             <List bulleted>
                                 <List.Item style={{ textDecoration: "underline" }}>

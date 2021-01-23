@@ -5,7 +5,6 @@ import { useTransition, animated } from 'react-spring'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
 import { Link } from "gatsby"
-import { Ref } from "semantic-ui-react"
 function AdamsNavbar(props) {
     const [isExpanded, setIsExpanded] = useState(false);
 
@@ -52,6 +51,8 @@ function AdamsNavbar(props) {
         case "FAQ":
             divs[3] = (<div className="triangle"> </div>);
             break;
+        default:
+            break
     }
 
 
@@ -59,7 +60,7 @@ function AdamsNavbar(props) {
     if (!props.isMobile) {
         return (
             <div className="navDiv">
-                <img src={img} className="navImg"></img>
+                <img src={img} alt="Carolina Closet Logo" className="navImg"></img>
                 <nav className="nav">
                     <div className="navItemContainer">
                         <h1 id="home" className="navItem" ><Link className="links" to="/">Home</Link></h1>
@@ -88,7 +89,7 @@ function AdamsNavbar(props) {
                 position: "relative"
             }}>
                 <div className="mobileNav">
-                    <img src={img} className="mobileImg"></img>
+                    <img src={img} alt="Carolina Closet Logo" className="mobileImg"></img>
                     <h1 className="mobileHeader">Carolina Closet</h1>
                     <FontAwesomeIcon className="FA" icon={faBars} onClick={() => handleNavClick()} />
 
