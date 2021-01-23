@@ -100,6 +100,24 @@ collections:
               { label: "Image", name: "memberImage", widget: "image" },
             ],
         }
+  - name: "FAQ"
+    label: "FAQ"
+    folder: "/content/blog/FAQ"
+    create: true
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - {
+          label: "Question",
+          name: "Question",
+          widget: "list",
+          allow_add: true,
+          fields:
+            [
+              { label: "Question", name: "names", widget: "string" },
+              { label: "answer", name: "answer", widget: "string" },
+              { label: "answerImage", name: "answerImage", widget: "image" },
+            ],
+        }
   - name: "LandingPage"
     label: "LandingPage"
     folder: "/content/blog/LandingPage/landing-page"
@@ -108,18 +126,3 @@ collections:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "SubHeader", name: "SubHeader", widget: "string" }
       - { label: "LandingPageimage", name: "landingPageimage", widget: "image" }
-# - name: "blog"
-#   label: "Blog"
-#   folder: "/content/blog"
-#   create: true
-#   slug: "index"
-#   media_folder: ""
-#   public_folder: ""
-#   path: "{{title}}/index"
-#   editor:
-#     preview: false
-#   fields:
-#     - { label: "Title", name: "title", widget: "string" }
-#     - { label: "Publish Date", name: "date", widget: "datetime" }
-#     - { label: "Description", name: "description", widget: "string" }
-#     - { label: "Body", name: "body", widget: "markdown" }
