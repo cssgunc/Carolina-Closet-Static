@@ -1,6 +1,6 @@
 import React from "react"
 import ReactCardFlip from 'react-card-flip';
-import { Container, Header, Segment } from "semantic-ui-react";
+import { Container, Header, Segment, Image, Card } from "semantic-ui-react";
 import "../Styles/aboutUs.css";
 
 class FlippedCard extends React.Component {
@@ -19,7 +19,7 @@ class FlippedCard extends React.Component {
 
   render() {
     return (
-      <div onClick={this.handleClick} style={{ height: "100%" }}>
+      <Card onClick={this.handleClick} style={{ height: "100%", width: this.props.img ? "200%" : "100%" }} fluid={this.props.img}>
         <ReactCardFlip isFlipped={this.state.isFlipped} flipDirection="vertical" containerStyle={{ height: "100%", padding: "15px" }}>
           <Container style={{ display: "flex", justifyContent: "center", height: "100%", alignItems: "center" }}>
             <Header size="medium">
@@ -30,17 +30,20 @@ class FlippedCard extends React.Component {
 
           <Container style={{ display: "flex", justifyContent: "center", height: "100%", alignItems: "center" }}>
             <Segment>
-              <p style={{ fontSize: "20px" }}>
+              <p style={{ fontSize: "20px", color: "black" }}>
                 {this.props.back}
 
               </p>
+              <Image src={this.props.img}>
 
+
+              </Image>
 
             </Segment>
           </Container>
 
         </ReactCardFlip >
-      </div >
+      </Card >
     )
   }
 } export default FlippedCard

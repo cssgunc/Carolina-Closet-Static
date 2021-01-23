@@ -113,7 +113,7 @@ collections:
           allow_add: true,
           fields:
             [
-              { label: "Question", name: "names", widget: "string" },
+              { label: "Question", name: "question", widget: "string" },
               { label: "Answer", name: "answer", widget: "string" },
               {
                 label: "Answer Image",

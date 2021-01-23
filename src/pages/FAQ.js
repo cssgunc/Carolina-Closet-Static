@@ -8,45 +8,48 @@ import { Container, GridColumn, Grid, Header, Segment, Rail, List, Image, ImageG
 import { isMobile } from "react-device-detect";
 import "../Styles/carousel.css"
 import FlippedCard from "../components/FlippedCard";
+import { graphql, useStaticQuery } from "gatsby"
 
-//import {Image from 'semantic-ui-react'
-//there was a container afetr line 20 or the second segment but I took it out
+
 
 function FAQ() {
 
-  const items = [
-    {
-      header: 'What are the requirements for becoming a member of Carolina Closet?',
-      description:
-        'All graduate and undergraduate studnets are welcome to be members of Carolina Closet, regardless of race, color, religion, ancestry, national origin, marital status, sexual orientation, age, disability, veteran status, or any other classification protected by law.',
-    },
-    {
-      header: 'What are the requirements for maintaining membership with Carolina Closet?',
-      description:
-        'General Membership operates on a volunteer basis, meaning every member is not required to attend all events and meetings. However, general members are required to volunteer at least twice a month',
-    },
-    {
-      header: 'How often does Carolina Closet meet?',
-      description:
-        'General body meetings are held at least once a month, the date of which will be communicated to all volunteers at least two weeks in advance per our Communications Chair. If you opt to join a specific committee, you will have an additional set of meetings subject to the discretion of your chair.',
-    },
-    {
-      header: 'What would I be doing as a volunteer?',
-      description:
-        'Some of the primary responsibilities of the volunteers will include: helping to sort through donations and take inventory, meeting clients who request appointments at the closet, and representing CC at various events when exec members are not available.',
-    },
-    {
-      header: 'What is the difference between ‘business casual’ and ‘business professional’?',
-      description:
-        'To the side is a helpful graphic to answer this question!',
-    },
-  ]
+
+  const data = useStaticQuery(graphql`
+  query FAQQuery {
+      allMarkdownRemark(filter: {fields: {slug: {glob: "/FAQ/*"}}}) {
+        edges {
+          node {
+            frontmatter {
+              title,
+              questions{
+                question,
+                answer,
+                answerImage
+                }
+            }
+          }
+        }
+      }
+    }
+  `)
+
+  const { allMarkdownRemark } = data // data.markdownRemark holds your post data
+  const { frontmatter } = allMarkdownRemark.edges[0].node
+  console.log(frontmatter)
+
+
+
+
+  const items = frontmatter.questions
+
+
 
 
   const cardLists = items.map((item) => (
     <Card>
       <FlippedCard
-        front={item.header} back={item.description}>
+        front={item.question} back={item.answer} img={item.answerImage}>
       </FlippedCard>
     </Card>));
 
@@ -54,8 +57,8 @@ function FAQ() {
     <div style={{ display: "100%" }}>
       <AdamsNavbar page="FAQ" isMobile={isMobile}></AdamsNavbar>
       <Container style={{ marginTop: "20px" }} >
-        <Header as="h1" content="Frequently Asked Questions" className="meetTheTeamHeader" />
-        <Card.Group>
+        <Header as="h1" content={frontmatter.title} className="meetTheTeamHeader" />
+        <Card.Group >
           {cardLists}
         </Card.Group>
         <ImageGroup>
