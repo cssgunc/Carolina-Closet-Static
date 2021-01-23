@@ -114,8 +114,13 @@ collections:
           fields:
             [
               { label: "Question", name: "names", widget: "string" },
-              { label: "answer", name: "answer", widget: "string" },
-              { label: "answerImage", name: "answerImage", widget: "image" },
+              { label: "Answer", name: "answer", widget: "string" },
+              {
+                label: "Answer Image",
+                name: "answerImage",
+                widget: "image",
+                required: false,
+              },
             ],
         }
   - name: "LandingPage"
@@ -129,5 +134,4 @@ collections:
           label: "Landing Page Image",
           name: "landingPageImage",
           widget: "image",
-          required: false,
         }
