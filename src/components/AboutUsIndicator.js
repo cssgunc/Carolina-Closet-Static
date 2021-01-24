@@ -7,7 +7,6 @@ function AboutUsIndicator(props) {
         return null;
     }
 
-    console.log(props.height)
     if (props.scroll >= props.height.current.offsetTop && props.scroll < props.height.current.offsetTop + props.height.current.offsetHeight) {
         return (<div className="indicator"></div>)
     } else {
