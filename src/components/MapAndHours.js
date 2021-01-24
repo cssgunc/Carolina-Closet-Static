@@ -6,10 +6,9 @@ import { graphql, useStaticQuery } from "gatsby"
 
 
 function MapAndHours() {
-
     const data = useStaticQuery(graphql`
     query MapAndHoursQuery {
-        allMarkdownRemark(filter: {fields: {slug: {glob: "/HomePage/*"}}}) {
+        allMarkdownRemark(filter: {fields: {slug: {glob: "/hoursMap/*"}}}) {
             edges {
             node {
                 frontmatter {
@@ -28,17 +27,16 @@ function MapAndHours() {
 
     const { allMarkdownRemark } = data // data.markdownRemark holds your post data
     const { frontmatter } = allMarkdownRemark.edges[0].node
+    console.log(frontmatter.location)
 
     let hours = null
     if (frontmatter.hours) {
-        hours = frontmatter.map((item) => {
+        hours = frontmatter.hours.map((item) => {
             return (
                 <>
                     <Header sub>{item.day}</Header>
-                    <p className="donationsHours">{hours.time}</p>
-
+                    <p className="donationsHours">{item.times}</p>
                 </>
-
             )
         })
     }
@@ -49,7 +47,8 @@ function MapAndHours() {
                 <Embed
                     className="aboutUsEmbed"
                     active={true}
-                    placeholder={frontmatter.location}
+                    placeholder="the location of Carolina Closer"
+                    url={frontmatter.location}
                 />
             </Grid.Column>
             <Grid.Column color="blue" computer={4} mobile={16} className="margin0" >

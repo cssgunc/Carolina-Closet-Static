@@ -1,6 +1,6 @@
 import React from "react"
 import ReactCardFlip from 'react-card-flip';
-import { Container, Header, Segment, Image, Card, ImageGroup } from "semantic-ui-react";
+import { Container, Segment, Image, ImageGroup } from "semantic-ui-react";
 import "../Styles/aboutUs.css";
 
 class PartnerFlippedCard extends React.Component {
