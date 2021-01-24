@@ -19,7 +19,7 @@ class FlippedCard extends React.Component {
 
   render() {
     return (
-      <Card onClick={this.handleClick} style={{ height: "100%", width: this.props.img ? "200%" : "100%" }} fluid={this.props.img}>
+      <Card onClick={this.handleClick} style={{ height: "100%", width: this.props.img ? "200%" : "100%", maxWidth: "85vw" }} fluid={this.props.img}>
         <ReactCardFlip isFlipped={this.state.isFlipped} flipDirection="vertical" containerStyle={{ height: "100%", padding: "15px" }}>
           <Container style={{ display: "flex", justifyContent: "center", height: "100%", alignItems: "center" }}>
             <Header size="medium">

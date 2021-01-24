@@ -123,8 +123,8 @@ collections:
               },
             ],
         }
-  - name: "Home Page"
-    label: "HomePage"
+  - name: "HomePage"
+    label: "Home Page"
     folder: "/content/blog/HomePage"
     create: true
     fields:
