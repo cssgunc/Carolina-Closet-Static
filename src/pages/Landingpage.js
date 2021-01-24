@@ -28,7 +28,6 @@ function LandingPage() {
   //        backgroundImage: `url(/img/${frontmatter.landingPageimage})`
   const { allMarkdownRemark } = data // data.markdownRemark holds your post data
   const { frontmatter } = allMarkdownRemark.edges[0].node
-  console.log(data)
 
 
 

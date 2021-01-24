@@ -131,7 +131,7 @@ collections:
       - { label: "About Us Header", name: "aboutUsHeader", widget: "string" }
       - {
           label: "About Us Content",
-          name: "aboutUsContent",
+          name: "aboutUsHomeContent",
           widget: "list",
           allow_add: true,
           fields:
