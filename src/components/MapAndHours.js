@@ -2,6 +2,7 @@ import React from "react"
 
 import "../Styles/aboutUs.css"
 import { Header, Embed, Grid, } from 'semantic-ui-react';
+import { graphql, useStaticQuery } from "gatsby"
 
 
 function MapAndHours() {

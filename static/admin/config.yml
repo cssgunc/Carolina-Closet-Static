@@ -45,8 +45,6 @@ collections:
     label: "About Us Partners"
     folder: "/content/blog/AboutUsPartners"
     create: true
-    media_folder: ""
-    public_folder: ""
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "SubHeader", name: "subHeader", widget: "string" }
