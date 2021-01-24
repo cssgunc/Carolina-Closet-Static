@@ -114,7 +114,7 @@ collections:
           fields:
             [
               { label: "Question", name: "question", widget: "string" },
-              { label: "Answer", name: "answer", widget: "string" },
+              { label: "Answer", name: "answer", widget: "text" },
               {
                 label: "Answer Image",
                 name: "answerImage",
@@ -128,6 +128,7 @@ collections:
     folder: "/content/blog/HomePage"
     create: true
     fields:
+      - { label: "About Us Header", name: "aboutUsHeader", widget: "string" }
       - {
           label: "About Us Content",
           name: "aboutUsContent",
@@ -143,7 +144,7 @@ collections:
               {
                 label: "Section Content",
                 name: "homePageContent",
-                widget: "string",
+                widget: "text",
               },
             ],
         }
@@ -168,7 +169,6 @@ collections:
               },
             ],
         }
-      - { label: "About Us Header", name: "aboutUsHeader", widget: "string" }
   - name: "LandingPage"
     label: "Landing Page"
     folder: "/content/blog/LandingPage/landing-page"
