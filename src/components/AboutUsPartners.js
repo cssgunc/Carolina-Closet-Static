@@ -36,7 +36,7 @@ function AboutUsPartners() {
     if (frontmatter.partnersList) {
         partners = frontmatter.partnersList.map((item) => {
             return (
-                <PartnerFlipCard img={"/img/" + item.image} back={item.about} />
+                <PartnerFlipCard img={item.image} back={item.about} />
 
 
             )
