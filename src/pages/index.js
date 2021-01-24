@@ -6,7 +6,7 @@ import "semantic-ui-less/semantic.less";
 import { Container, Header, Segment, Grid, GridColumn, List, Ref } from 'semantic-ui-react';
 import { TwitterTimelineEmbed } from 'react-twitter-embed'
 import LandingPage from "./Landingpage"
-
+import { graphql, useStaticQuery } from "gatsby"
 import MapAndHours from "../components/MapAndHours";
 
 
@@ -14,9 +14,58 @@ function Homepage() {
 
     const mobileNavPosition = useState(null)
 
+    const data = useStaticQuery(graphql`
+    query IndexQuery {
+        allMarkdownRemark(filter: {fields: {slug: {glob: "/HomePage/*"}}}) {
+            edges {
+            node {
+                frontmatter {
+                    aboutUsHeader,
+                    aboutUsHomeContent{
+                        homePageTitle,
+                        homePageContent
+                    },
+                    resourcesTitle,
+                    mainEmail,
+                    resources{
+                        resourceText,
+                        resourceLink
+                    }
+                }
+            }
+            }
+        }
+        }
+    `)
 
+    const { allMarkdownRemark } = data // data.markdownRemark holds your post data
+    const { frontmatter } = allMarkdownRemark.edges[0].node
 
-
+    let aboutUsSection = null;
+    if (frontmatter.aboutUsHomeContent) {
+        aboutUsSection = (frontmatter.aboutUsHomeContent.map((item) => {
+            return (
+                <>
+                    <Header as="h2" style={{ color: "#13294B", textDecoration: "underline" }} sub>{item.homePageTitle}</Header>
+                    <Container text>
+                        <p>{item.homePageContent}</p>
+                    </Container>
+                </>
+            )
+        }))
+    }
+    let resourcesList = null
+    if (frontmatter.resources) {
+        resourcesList = (frontmatter.resources.map((item) => {
+            return (
+                <List.Item>  <p style={{ textDecoration: "underline" }}>
+                    {item.resourceText}
+                </p>
+                    <a href={item.resourceLink}>{item.resourceLink}</a>
+                </List.Item >
+            )
+        }))
+    }
 
 
 
@@ -33,18 +82,8 @@ function Homepage() {
             <Container>
                 <Segment className="segmentBackground">
                     <Container text>
-                        <Header as="h1" size="huge" center={true} color="blue" className="mainContentHeader">A Little About us</Header>
-                        <Header as="h2" style={{ color: "#13294B", textDecoration: "underline" }} sub>Our Mission</Header>
-                        <Container text>
-                            <p></p>
-                        </Container>
-
-                        <Header as="h2" style={{ color: "#13294B", textDecoration: "underline" }} sub>Our Vision</Header>
-                        <Container text>
-                            <p></p>
-                        </Container>
-
-
+                        <Header as="h1" size="huge" center={true} color="blue" className="mainContentHeader">{frontmatter.aboutUsHeader}</Header>
+                        {aboutUsSection}
                     </Container>
 
                 </Segment>
@@ -84,19 +123,11 @@ function Homepage() {
                 <Segment >
                     <Grid>
                         <GridColumn computer={4} mobile={16}>
-                            <Header as="h2" style={{ color: "#13294B", textDecoration: "underline" }}>RESOURCES</Header>
-                            <p> mail us at <a href="mailto:carolinaclosetunc@gmail.com" className="emailLink">carolinaclosetunc@gmail.com</a></p>
+                            <Header as="h2" style={{ color: "#13294B", textDecoration: "underline" }}>{frontmatter.resourcesTitle}</Header>
+                            <p> Mail us at <a href={"mailto:" + frontmatter.mainEmail} className="emailLink">carolinaclosetunc@gmail.com</a></p>
 
                             <List bulleted>
-                                <List.Item style={{ textDecoration: "underline" }}>
-                                    Rental Policy and Procedure
-                                                </List.Item>
-                                <List.Item style={{ textDecoration: "underline" }}>
-                                    Volunteer at Carolina Closet
-                                </List.Item>
-                                <List.Item style={{ textDecoration: "underline" }}>
-                                    Donations
-                                </List.Item>
+                                {resourcesList}
                             </List>
 
                         </GridColumn>

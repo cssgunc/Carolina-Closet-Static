@@ -181,3 +181,20 @@ collections:
           name: "landingPageImage",
           widget: "image",
         }
+  - name: "hoursMap"
+    label: "Hours and Location"
+    folder: "/content/blog/hoursMap"
+    create: true
+    fields:
+      - { label: "location", name: "location", widget: "string" }
+      - {
+          label: "Hours",
+          name: "hours",
+          widget: "list",
+          allow_add: true,
+          fields:
+            [
+              { label: "Day", name: "day", widget: "string" },
+              { label: "Times", name: "times", widget: "string" },
+            ],
+        }

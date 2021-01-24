@@ -35,7 +35,6 @@ function FAQ() {
 
   const { allMarkdownRemark } = data // data.markdownRemark holds your post data
   const { frontmatter } = allMarkdownRemark.edges[0].node
-  console.log(frontmatter)
 
 
 
